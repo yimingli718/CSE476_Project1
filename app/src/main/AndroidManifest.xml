@@ -24,6 +24,10 @@
             android:name=".SelectionActivity"
             android:label="@string/title_activity_selection" >
         </activity>
+        <activity
+            android:name=".help_page"
+            android:label="@string/title_activity_help_page" >
+        </activity>
     </application>
 
 </manifest>

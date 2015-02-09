@@ -1,5 +1,6 @@
 package edu.msu.liyimin2.project1;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -43,5 +44,16 @@ public class MainActivity extends ActionBarActivity {
     {
         Intent intent = new Intent(this, SelectionActivity.class);
         startActivity(intent);
+    }
+
+    public void onHelp(View view)
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+        builder.setTitle(R.string.HelpTitle);
+        builder.setMessage(R.string.Help);
+        // Create the dialog box and show it
+        builder.setPositiveButton(android.R.string.ok, null);
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 }
