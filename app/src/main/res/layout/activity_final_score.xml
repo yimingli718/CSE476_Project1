@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.msu.liyimin2.project1.FinalScore"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/player_2_wins"
+        android:id="@+id/winnerText"
+        android:layout_gravity="center_horizontal"
+        android:textIsSelectable="true"
+        android:layout_weight="2"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:nestedScrollingEnabled="true"
+        android:layout_weight="2"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/player_1_score"
+            android:id="@+id/player_1_score"
+            android:layout_toRightOf="@+id/player_1_score_string" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/player_1_score_string"
+            android:id="@+id/player_1_score_string"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/player_2_score_string"
+            android:id="@+id/player_2_score_string"
+            android:layout_below="@+id/player_1_score_string"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/player_2_score"
+            android:id="@+id/player_2_score"
+            android:layout_toRightOf="@+id/player_2_score_string"
+            android:layout_alignBaseline="@+id/player_2_score_string" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu"
+            android:id="@+id/button5"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+</LinearLayout>
