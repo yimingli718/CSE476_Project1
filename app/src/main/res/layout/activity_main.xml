@@ -31,7 +31,9 @@
             android:maxLength="10"
             android:maxLines="1"
             android:layout_toLeftOf="@+id/empty_frame_1"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="20dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -43,7 +45,9 @@
             android:layout_toRightOf="@+id/empty_frame_1"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="20dp" />
+            android:layout_marginRight="20dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
 
         <FrameLayout
             android:layout_width="20dp"
@@ -58,18 +62,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/start_game"
-        android:id="@+id/button"
+        android:id="@+id/startButton"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0"
         android:gravity="center"
         android:layout_marginBottom="10dp"
-        android:onClick="onStartGame" />
+        android:onClick="onStartGame"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/help"
-        android:id="@+id/button2"
+        android:id="@+id/helpButton"
         android:layout_weight="0"
         android:layout_gravity="center"
         android:gravity="center"
@@ -79,5 +85,5 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:id="@+id/empty_frame_2"></FrameLayout>
+        android:id="@+id/empty_frame_2"/>
 </LinearLayout>

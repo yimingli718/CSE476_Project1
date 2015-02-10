@@ -68,7 +68,9 @@
             android:layout_height="wrap_content"
             android:text="@string/menu"
             android:id="@+id/menuButton"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:nestedScrollingEnabled="false"
+            android:onClick="onMenu" />
     </FrameLayout>
 
 </LinearLayout>
