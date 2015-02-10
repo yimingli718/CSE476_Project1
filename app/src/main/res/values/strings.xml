@@ -14,4 +14,9 @@
     <string name="title_activity_help_page">help_page</string>
     <string name="Help">Type in your name, then hit start to start the game.</string>
     <string name="HelpTitle">Help</string>
+    <string name="bird_1">Bird 1</string>
+    <string name="selectpicture">Bird to select</string>
+    <string name="next">Next</string>
+    <string name="prev">Prev</string>
+    <string name="select">Select</string>
 </resources>
