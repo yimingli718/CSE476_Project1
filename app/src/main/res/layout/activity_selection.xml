@@ -40,7 +40,8 @@
             android:layout_height="wrap_content"
             android:text="@string/select"
             android:id="@+id/selectButton"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:onClick="onSelect" />
 
 
         <Button
