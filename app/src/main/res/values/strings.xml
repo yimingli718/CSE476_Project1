@@ -26,5 +26,7 @@
     <string name="player_2_score_string">Player 2 score:</string>
     <string name="player_2_score">1</string>
     <string name="menu">Menu</string>
+    <string name="title_activity_game">GameActivity</string>
+    <string name="Confirm">Confirm</string>
 
 </resources>
