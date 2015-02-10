@@ -2,7 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
     <ImageView
         android:layout_width="match_parent"
@@ -31,9 +33,7 @@
             android:maxLength="10"
             android:maxLines="1"
             android:layout_toLeftOf="@+id/empty_frame_1"
-            android:layout_marginLeft="20dp"
-            android:focusable="false"
-            android:focusableInTouchMode="false" />
+            android:layout_marginLeft="20dp"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -45,9 +45,7 @@
             android:layout_toRightOf="@+id/empty_frame_1"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="20dp"
-            android:focusable="false"
-            android:focusableInTouchMode="false" />
+            android:layout_marginRight="20dp"/>
 
         <FrameLayout
             android:layout_width="20dp"
@@ -67,9 +65,7 @@
         android:layout_weight="0"
         android:gravity="center"
         android:layout_marginBottom="10dp"
-        android:onClick="onStartGame"
-        android:focusable="false"
-        android:focusableInTouchMode="false" />
+        android:onClick="onStartGame"/>
 
     <Button
         android:layout_width="wrap_content"
