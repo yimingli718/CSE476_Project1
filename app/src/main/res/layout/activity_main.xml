@@ -33,7 +33,8 @@
             android:maxLength="10"
             android:maxLines="1"
             android:layout_toLeftOf="@+id/empty_frame_1"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="20dp"
+            android:inputType="text" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -45,7 +46,8 @@
             android:layout_toRightOf="@+id/empty_frame_1"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:inputType="text" />
 
         <FrameLayout
             android:layout_width="20dp"
