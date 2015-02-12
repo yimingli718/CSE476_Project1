@@ -12,6 +12,8 @@ public class GameActivity extends ActionBarActivity {
 
     private int cnt = 0;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +46,7 @@ public class GameActivity extends ActionBarActivity {
     public void onConfirm(View view) {
         cnt++;
         if (cnt == 2) {
-            Intent intent = new Intent(this, SelectionActivity.class);
+            Intent intent = new Intent(this, FinalScore.class);
             startActivity(intent);
             cnt = 0;
         }
