@@ -1,0 +1,26 @@
+
+Project 1 Submission
+
+Group Name:   Blue Jay
+
+When you have completed the project, complete the following form and include it with your project. Include this file as a text file in the folder with your project when you turn it in. 
+
+
+Member 1: Justin Rucinski
+
+Responsiblity: Selection view, Final Score view
+	
+
+
+Member 2: Xianhe Chen
+
+Responsiblity: Main menu view
+
+
+
+Member 3: Yiming Li
+
+Responsiblity: Game view
+
+
+
