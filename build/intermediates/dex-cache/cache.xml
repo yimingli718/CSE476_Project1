@@ -23,11 +23,32 @@
         <dex dex="C:\Users\Michael\Desktop\New folder\cse476_project1\app\build\intermediates\pre-dexed\debug\classes-a136aca9662d62352b345f4a87ac633572dd5761.jar" />
     </item>
     <item
+        jar="C:\Users\Michael\Desktop\New folder (2)\cse476_project1\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\Michael\Desktop\New folder (2)\cse476_project1\app\build\intermediates\pre-dexed\debug\classes-4def73233930d0f6a29896eafefd9f19a3dac1d8.jar" />
+    </item>
+    <item
         jar="C:\Users\Michael\Desktop\New folder\cse476_project1\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
         <dex dex="C:\Users\Michael\Desktop\New folder\cse476_project1\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-2844c137e25faaa962dce9aee376c962a7d6d53d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Michael\Desktop\New folder (2)\cse476_project1\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\Michael\Desktop\New folder (2)\cse476_project1\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-b003c667283013b98601bb56bd5c81179add1551.jar" />
+    </item>
+    <item
+        jar="C:\Users\Michael\Desktop\New folder (2)\cse476_project1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\Michael\Desktop\New folder (2)\cse476_project1\app\build\intermediates\pre-dexed\debug\classes-c3f967171210f9fe2e6406dd7888849264478fd1.jar" />
     </item>
 
 </items>

@@ -41,7 +41,7 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
-        EditText editTextPhone = (EditText) findViewById(R.id.player_2);
+        EditText editTextPhone = (EditText) findViewById(R.id.player2);
         editTextPhone.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
