@@ -6,31 +6,37 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="@string/Player_1"
         android:id="@+id/user"
         android:layout_gravity="center"
         android:layout_weight="1"
         android:gravity="center" />
 
-    <ImageView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:src="@drawable/seagull"
-        android:layout_gravity="center"
-        android:layout_weight="4"
-        android:layout_margin="10dp"
-        android:contentDescription="@string/birddescription" />
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="4">
+
+        <view
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            class="edu.msu.liyimin2.project1.GameView"
+            android:id="@+id/gameView"
+            android:layout_gravity="center_horizontal"
+            />
+
+        </FrameLayout>
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="@string/Confirm"
         android:id="@+id/confirmButton"
         android:onClick="onConfirm"
         android:layout_gravity="center"
         android:layout_margin="10dp"
-        android:layout_weight="0.1" />
+        android:layout_weight="0.5" />
 
 </LinearLayout>

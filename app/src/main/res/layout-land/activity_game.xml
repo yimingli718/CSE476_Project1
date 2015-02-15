@@ -6,25 +6,22 @@
     android:baselineAligned="false">
 
     <FrameLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="fill_parent"
         android:layout_gravity="center_vertical"
-        android:layout_weight="2"
-        android:id="@+id/CustomeFrame">
+        android:layout_weight="2">
 
-        <ImageView
+        <view
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/imageView"
-            android:layout_gravity="center"
-            android:src="@drawable/seagull"
-            android:layout_margin="20dp"
-            android:contentDescription="@string/birddescription" />
+            class="edu.msu.liyimin2.project1.GameView"
+            android:id="@+id/gameView"
+            android:layout_gravity="center" />
     </FrameLayout>
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
         android:layout_weight="1">
