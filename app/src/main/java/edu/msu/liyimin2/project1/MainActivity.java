@@ -16,8 +16,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+
 public class MainActivity extends ActionBarActivity {
-    public Game game = new Game();
+    private String input_1;
+    private String input_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,28 +33,27 @@ public class MainActivity extends ActionBarActivity {
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
                 boolean handled = false;
                 if (i == EditorInfo.IME_ACTION_NEXT){
-                    game.player1.name = textView.getText().toString();
-                    Toast.makeText(MainActivity.this, "Player 1 name is: " + game.player1.name, Toast.LENGTH_SHORT).show();
+                    input_1 = textView.getText().toString();
+                    Toast.makeText(MainActivity.this, "Player 1 name is: " + input_1, Toast.LENGTH_SHORT).show();
                 }
 
                 return handled;
             }
         });
 
-        EditText player_2_text = (EditText) findViewById(R.id.player_2);
-        player_2_text.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        EditText editTextPhone = (EditText) findViewById(R.id.player_2);
+        editTextPhone.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
                 boolean handled = false;
                 if (i == EditorInfo.IME_ACTION_DONE) {
                     //show toast for input
-                    game.player2.name = textView.getText().toString();
+                    input_2 = textView.getText().toString();
                     Toast.makeText(MainActivity.this, "Player 2 name is: "
-                            + game.player2.name, Toast.LENGTH_SHORT).show();
+                            + input_2, Toast.LENGTH_SHORT).show();
 
-                    //close keyboard
-                    InputMethodManager inputManager;
-                    inputManager = (InputMethodManager)
+                    //close keyboard and
+                    InputMethodManager inputManager = (InputMethodManager)
                             getSystemService(Context.INPUT_METHOD_SERVICE);
                     inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
                             InputMethodManager.HIDE_NOT_ALWAYS);
@@ -61,9 +63,6 @@ public class MainActivity extends ActionBarActivity {
                 return handled;
             }
         });
-
-
-
     }
 
 
@@ -105,4 +104,7 @@ public class MainActivity extends ActionBarActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
+
+
+
 }

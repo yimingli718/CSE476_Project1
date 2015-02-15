@@ -31,7 +31,7 @@ public class GameView extends View {
     }
 
     private void init(AttributeSet attrs, int defStyle) {
-        //game = new Game(getContext());
+        game = new Game(getContext());
 
     }
 
@@ -40,6 +40,6 @@ public class GameView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        //game.draw(canvas);
+        game.draw(canvas);
     }
 }

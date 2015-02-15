@@ -9,16 +9,6 @@ import android.graphics.Paint;
  */
 public class Game {
     /**
-     * Player 1
-     */
-    public Player player1;
-
-    /**
-     * Player 2
-     */
-    public Player player2;
-
-    /**
      * Percentage of the display width or height that
      * is occupied by the puzzle.
      */
@@ -32,26 +22,30 @@ public class Game {
      * Paint for outlining the area the puzzle is in
      */
     private Paint outlinePaint;
+    /**
+     * Player 1
+     */
+    public Player player1;
 
-    /*public Game(){
-
-    }
+    /**
+     * Player 2
+     */
+    public Player player2;
 
     public Game(Context context){
-
+        fillPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        fillPaint.setColor(0xffcccccc);
     }
 
-    public void draw(Canvas canvas){int wid = canvas.getWidth();
+    public void draw(Canvas canvas){
+        int wid = canvas.getWidth();
         int hit = canvas.getHeight();
-
-        // Determine the minimum of the two dimensions
         int minDim = wid < hit ? wid : hit;
         int puzzleSize = (int)(minDim * SCALE_IN_VIEW);
-
-        // Compute the margins so we center the puzzle
+        //Computer the margins
         int marginX = (wid - puzzleSize) / 2;
         int marginY = (hit - puzzleSize) / 2;
 
         canvas.drawRect(marginX, marginY, marginX + puzzleSize, marginY + puzzleSize, fillPaint);
-    }*/
+    }
 }
