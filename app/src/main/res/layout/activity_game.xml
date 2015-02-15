@@ -4,15 +4,6 @@
     tools:context="edu.msu.liyimin2.project1.GameActivity"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:text="@string/Player_1"
-        android:id="@+id/user"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:gravity="center" />
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -28,6 +19,14 @@
             />
 
         </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/Player_1"
+        android:id="@+id/user"
+        android:layout_weight="0.5"
+        android:gravity="center" />
 
     <Button
         android:layout_width="wrap_content"

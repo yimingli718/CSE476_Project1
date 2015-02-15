@@ -8,15 +8,13 @@
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="fill_parent"
-        android:layout_gravity="center_vertical"
         android:layout_weight="2">
 
         <view
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             class="edu.msu.liyimin2.project1.GameView"
-            android:id="@+id/gameView"
-            android:layout_gravity="center" />
+            android:id="@+id/gameView" />
     </FrameLayout>
 
     <LinearLayout

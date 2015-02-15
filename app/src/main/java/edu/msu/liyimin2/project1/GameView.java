@@ -1,12 +1,7 @@
 package edu.msu.liyimin2.project1;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.drawable.Drawable;
-import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -15,6 +10,11 @@ import android.view.View;
  * TODO: document your custom view class.
  */
 public class GameView extends View {
+    /**
+     * The actual game
+     */
+    private Game game;
+
     public GameView(Context context) {
         super(context);
         init(null, 0);
@@ -31,6 +31,7 @@ public class GameView extends View {
     }
 
     private void init(AttributeSet attrs, int defStyle) {
+        game = new Game(getContext());
 
     }
 
@@ -39,5 +40,6 @@ public class GameView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        game.draw(canvas);
     }
 }
