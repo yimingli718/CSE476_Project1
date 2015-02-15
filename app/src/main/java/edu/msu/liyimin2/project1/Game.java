@@ -25,12 +25,16 @@ public class Game {
     /**
      * Player 1
      */
-    public Player player1;
+    public Player player1 = new Player();
 
     /**
      * Player 2
      */
-    public Player player2;
+    public Player player2 = new Player();
+
+    public Game(){
+
+    }
 
     public Game(Context context){
         fillPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
