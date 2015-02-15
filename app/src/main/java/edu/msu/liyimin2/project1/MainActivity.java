@@ -16,11 +16,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-
 public class MainActivity extends ActionBarActivity {
     private String input_1;
     private String input_2;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +41,8 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
-        EditText editTextPhone = (EditText) findViewById(R.id.player2);
-        editTextPhone.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        EditText player_2_text = (EditText) findViewById(R.id.player_2);
+        player_2_text.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
                 boolean handled = false;
@@ -52,7 +52,7 @@ public class MainActivity extends ActionBarActivity {
                     Toast.makeText(MainActivity.this, "Player 2 name is: "
                             + input_2, Toast.LENGTH_SHORT).show();
 
-                    //close keyboard and
+                    //close keyboard
                     InputMethodManager inputManager = (InputMethodManager)
                             getSystemService(Context.INPUT_METHOD_SERVICE);
                     inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
@@ -63,6 +63,9 @@ public class MainActivity extends ActionBarActivity {
                 return handled;
             }
         });
+
+
+
     }
 
 
@@ -105,6 +108,11 @@ public class MainActivity extends ActionBarActivity {
         alertDialog.show();
     }
 
+    public String getInput_1() {
+        return input_1;
+    }
 
-
+    public String getInput_2() {
+        return input_2;
+    }
 }
