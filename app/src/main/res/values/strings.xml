@@ -28,5 +28,6 @@
     <string name="menu">Menu</string>
     <string name="title_activity_game">GameActivity</string>
     <string name="Confirm">Confirm</string>
+    <string name="birddescription">game play area</string>
 
 </resources>

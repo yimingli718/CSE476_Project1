@@ -18,7 +18,8 @@
             android:id="@+id/imageView"
             android:layout_gravity="center"
             android:src="@drawable/seagull"
-            android:layout_margin="20dp" />
+            android:layout_margin="20dp"
+            android:contentDescription="@string/birddescription" />
     </FrameLayout>
 
     <LinearLayout
@@ -53,7 +54,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:text="Confirm"
+            android:text="@string/Confirm"
             android:id="@+id/ConfirmButton"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
