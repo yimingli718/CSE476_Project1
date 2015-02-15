@@ -17,10 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
-    private String input_1;
-    private String input_2;
-
-
+    public Game game = new Game();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +30,8 @@ public class MainActivity extends ActionBarActivity {
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
                 boolean handled = false;
                 if (i == EditorInfo.IME_ACTION_NEXT){
-                    input_1 = textView.getText().toString();
-                    Toast.makeText(MainActivity.this, "Player 1 name is: " + input_1, Toast.LENGTH_SHORT).show();
+                    game.player1.name = textView.getText().toString();
+                    Toast.makeText(MainActivity.this, "Player 1 name is: " + game.player1.name, Toast.LENGTH_SHORT).show();
                 }
 
                 return handled;
@@ -48,12 +45,13 @@ public class MainActivity extends ActionBarActivity {
                 boolean handled = false;
                 if (i == EditorInfo.IME_ACTION_DONE) {
                     //show toast for input
-                    input_2 = textView.getText().toString();
+                    game.player2.name = textView.getText().toString();
                     Toast.makeText(MainActivity.this, "Player 2 name is: "
-                            + input_2, Toast.LENGTH_SHORT).show();
+                            + game.player2.name, Toast.LENGTH_SHORT).show();
 
                     //close keyboard
-                    InputMethodManager inputManager = (InputMethodManager)
+                    InputMethodManager inputManager;
+                    inputManager = (InputMethodManager)
                             getSystemService(Context.INPUT_METHOD_SERVICE);
                     inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
                             InputMethodManager.HIDE_NOT_ALWAYS);
@@ -106,13 +104,5 @@ public class MainActivity extends ActionBarActivity {
         builder.setPositiveButton(android.R.string.ok, null);
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
-    }
-
-    public String getInput_1() {
-        return input_1;
-    }
-
-    public String getInput_2() {
-        return input_2;
     }
 }
