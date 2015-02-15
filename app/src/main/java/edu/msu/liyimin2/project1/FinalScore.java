@@ -16,7 +16,6 @@ public class FinalScore extends ActionBarActivity {
         setContentView(R.layout.activity_final_score);
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -34,6 +33,7 @@ public class FinalScore extends ActionBarActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+
         }
 
         return super.onOptionsItemSelected(item);

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class SelectionActivity extends ActionBarActivity {
@@ -15,7 +16,6 @@ public class SelectionActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

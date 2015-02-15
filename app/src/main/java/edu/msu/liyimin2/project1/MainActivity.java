@@ -19,6 +19,7 @@ import android.widget.Toast;
 public class MainActivity extends ActionBarActivity {
     private String input_1;
     private String input_2;
+    private Game game = new Game();
 
 
 
@@ -36,7 +37,6 @@ public class MainActivity extends ActionBarActivity {
                     input_1 = textView.getText().toString();
                     Toast.makeText(MainActivity.this, "Player 1 name is: " + input_1, Toast.LENGTH_SHORT).show();
                 }
-
                 return handled;
             }
         });
@@ -49,6 +49,7 @@ public class MainActivity extends ActionBarActivity {
                 if (i == EditorInfo.IME_ACTION_DONE) {
                     //show toast for input
                     input_2 = textView.getText().toString();
+
                     Toast.makeText(MainActivity.this, "Player 2 name is: "
                             + input_2, Toast.LENGTH_SHORT).show();
 

@@ -6,7 +6,7 @@ public class Player {
     /**
      * Player name
      */
-    public String name;
+    public String name = "player1";
 
     /**
      * Score

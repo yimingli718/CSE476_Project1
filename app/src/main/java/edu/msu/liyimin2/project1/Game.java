@@ -7,6 +7,7 @@ public class Game {
     /**
      * Player 1
      */
+
     public Player player1;
 
     /**
