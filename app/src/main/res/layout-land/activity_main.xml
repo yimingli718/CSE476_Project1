@@ -14,9 +14,9 @@
         android:src="@drawable/donald"
         android:layout_weight="1"
         android:focusable="false"
-        android:layout_margin="20dp"
         android:contentDescription="@string/donald"
-        android:cropToPadding="false" />
+        android:cropToPadding="false"
+        android:layout_margin="10dp" />
 
     <RelativeLayout
         android:layout_width="0dp"
