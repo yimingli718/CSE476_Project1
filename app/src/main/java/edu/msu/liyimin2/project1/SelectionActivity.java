@@ -36,6 +36,8 @@ public class SelectionActivity extends ActionBarActivity {
     private int round = 0;
     private int cnt = 0;
 
+    private TextView playerIndicator;
+
 
 
     @Override
@@ -48,7 +50,8 @@ public class SelectionActivity extends ActionBarActivity {
         cnt = bundle.getInt("COUNT", 0);
         round = bundle.getInt("ROUND", 0);
 
-        TextView playerIndicator = (TextView)findViewById(R.id.playerIndicator);
+        playerIndicator = (TextView)findViewById(R.id.playerIndicator);
+        //playerIndicator.setText(game.getActivePlayer().getName());
         if(round == 0){
             if(cnt == 0){
                 playerIndicator.setText(game.getPlayer1().getName());
@@ -71,6 +74,8 @@ public class SelectionActivity extends ActionBarActivity {
         birdList.add(new Bird(getBaseContext(), R.drawable.donald));
         birdList.add(new Bird(getBaseContext(), R.drawable.robin));
         birdList.add(new Bird(getBaseContext(), R.drawable.parrot));
+        birdList.add(new Bird(getBaseContext(), R.drawable.seagull));
+        birdList.add(new Bird(getBaseContext(), R.drawable.swallow));
         imgView = (ImageView)findViewById(R.id.birdImage);
         imgView.setImageResource(birdList.get(birdIndex).getBirdId());
 
@@ -107,13 +112,11 @@ public class SelectionActivity extends ActionBarActivity {
             if (cnt == 1) {
                 Intent intent = new Intent(this, SelectionActivity.class);
                 game.getPlayer1().setBird(birdList.get(birdIndex));
+                playerIndicator.setText(game.getPlayer2().getName());
+                birdIndex = 0;
+                imgView.setImageResource(birdList.get(birdIndex).getBirdId());
+                imgView.invalidate();
 
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("GAME", game);
-                bundle.putInt("COUNT", cnt);
-                bundle.putInt("ROUND", round);
-                intent.putExtras(bundle);
-                startActivity(intent);
             }
             if (cnt == 2) {
                 Intent intent = new Intent(this, GameActivity.class);
@@ -132,13 +135,11 @@ public class SelectionActivity extends ActionBarActivity {
             if (cnt == 1) {
                 Intent intent = new Intent(this, SelectionActivity.class);
                 game.getPlayer2().setBird(birdList.get(birdIndex));
+                playerIndicator.setText(game.getPlayer1().getName());
+                birdIndex = 0;
+                imgView.setImageResource(birdList.get(birdIndex).getBirdId());
+                imgView.invalidate();
 
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("GAME", game);
-                bundle.putInt("COUNT", cnt);
-                bundle.putInt("ROUND", round);
-                intent.putExtras(bundle);
-                startActivity(intent);
             }
             if (cnt == 2) {
                 Intent intent = new Intent(this, GameActivity.class);

@@ -16,8 +16,12 @@ public class Game implements Serializable {
     //Player 2
     private Player player2 = new Player();
 
+    private Player activePlayer = player1;
+
     //The bird in the has been in the gameview
     private ArrayList<Bird> birds = new ArrayList<Bird>();
+
+
     //The scale for the custome view
     final static float SCALE_IN_VIEW = 0.9f;
     //The size of custome view in pixel
@@ -40,6 +44,7 @@ public class Game implements Serializable {
         stream.defaultWriteObject();
         stream.writeObject(player1);
         stream.writeObject(player2);
+        stream.writeObject(activePlayer);
     }
 
     private synchronized void readObject(java.io.ObjectInputStream stream) throws java.
@@ -47,6 +52,7 @@ public class Game implements Serializable {
         stream.defaultReadObject();
         player1 = (Player) stream.readObject();
         player2 = (Player) stream.readObject();
+        activePlayer = (Player) stream.readObject();
     }
 
     public Player getPlayer1(){
@@ -55,6 +61,10 @@ public class Game implements Serializable {
 
     public Player getPlayer2(){
         return player2;
+    }
+
+    public Player getActivePlayer(){
+        return activePlayer;
     }
 
     public void ArchiveBird(Bird b){
