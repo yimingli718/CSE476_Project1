@@ -16,7 +16,7 @@ public class Game implements Serializable {
     //Player 2
     private Player player2 = new Player();
 
-    private Player activePlayer = player1;
+    private int activePlayer = 1;
 
     //The bird in the has been in the gameview
     private ArrayList<Bird> birds = new ArrayList<Bird>();
@@ -44,7 +44,7 @@ public class Game implements Serializable {
         stream.defaultWriteObject();
         stream.writeObject(player1);
         stream.writeObject(player2);
-        stream.writeObject(activePlayer);
+        //stream.write(activePlayer);
     }
 
     private synchronized void readObject(java.io.ObjectInputStream stream) throws java.
@@ -52,7 +52,7 @@ public class Game implements Serializable {
         stream.defaultReadObject();
         player1 = (Player) stream.readObject();
         player2 = (Player) stream.readObject();
-        activePlayer = (Player) stream.readObject();
+        //activePlayer = stream.readInt();
     }
 
     public Player getPlayer1(){
@@ -64,7 +64,21 @@ public class Game implements Serializable {
     }
 
     public Player getActivePlayer(){
-        return activePlayer;
+      if(activePlayer == 1){
+          return player1;
+      }
+      else{
+          return player2;
+      }
+    }
+
+    public void nextPlayer(){
+        if(activePlayer == 1){
+            activePlayer = 2;
+        }
+        else{
+            activePlayer = 1;
+        }
     }
 
     public void ArchiveBird(Bird b){

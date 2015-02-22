@@ -11,8 +11,6 @@ import android.widget.TextView;
 
 public class GameActivity extends ActionBarActivity {
     private Game game;
-    private int round = 0;
-    private int cnt = 0;
     private GameView gameView;
 
     @Override
@@ -25,10 +23,13 @@ public class GameActivity extends ActionBarActivity {
         Intent intent=this.getIntent();
         Bundle bundle=intent.getExtras();
         game=(Game)bundle.getSerializable("GAME");
-        cnt = bundle.getInt("COUNT", 0);
-        round = bundle.getInt("ROUND", 0);
+
         TextView user = (TextView)findViewById(R.id.user);
-        if(round == 0) {
+
+        user.setText(game.getPlayer1().getName());
+        gameView.setGame(game);
+        gameView.setPlayer(game.getActivePlayer());
+        /*if(round == 0) {
             if (cnt == 0) {
                 user.setText(game.getPlayer1().getName());
                 gameView.setGame(game);
@@ -51,7 +52,7 @@ public class GameActivity extends ActionBarActivity {
                 gameView.setGame(game);
                 gameView.setPlayer(game.getPlayer2());
             }
-        }
+        }*/
     }
 
 
@@ -78,9 +79,10 @@ public class GameActivity extends ActionBarActivity {
     }
 
     public void onConfirm(View view) {
-        cnt++;
+        //cnt++;
         game.ArchiveBird(gameView.getPlayer().getBird());
-        if(round == 0) {
+
+        /*if(round == 0) {
             if (cnt == 1) {
                 game.getPlayer1().addPoint();
                 Intent intent = new Intent(this, GameActivity.class);
@@ -132,6 +134,6 @@ public class GameActivity extends ActionBarActivity {
                 startActivity(intent);
             }
 
-        }
+        }*/
     }
 }
