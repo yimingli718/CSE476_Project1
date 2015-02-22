@@ -12,14 +12,16 @@
         android:src="@drawable/donald"
         android:contentDescription="@string/donald"
         android:layout_weight="7"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_gravity="center"
         android:layout_weight="2"
         android:gravity="center"
-        android:id="@+id/Players">
+        android:id="@+id/Players"
+        android:layout_height="wrap_content">
 
         <EditText
             android:layout_width="wrap_content"

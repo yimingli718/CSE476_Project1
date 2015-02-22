@@ -39,12 +39,17 @@ public class Bird implements Serializable {
      */
     private float y = 0;
 
-    private int id;
+    public int getBirdId() {
+        return birdId;
+    }
+
+    private int birdId;
 
     public Bird(Context context, int id) {
         rect = new Rect();
         //setRect();
         bird = BitmapFactory.decodeResource(context.getResources(), id);
+        birdId = id;
     }
 
     public void move(float dx, float dy) {
@@ -136,7 +141,5 @@ public class Bird implements Serializable {
             byteStream.write(b);
         byte bitmapBytes[] = byteStream.toByteArray();
         bird = BitmapFactory.decodeByteArray(bitmapBytes, 0, bitmapBytes.length);
-
-        //bird = (Bird) stream.readObject();
     }
 }
