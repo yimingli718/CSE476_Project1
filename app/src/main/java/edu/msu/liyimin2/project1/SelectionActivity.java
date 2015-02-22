@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 
 public class SelectionActivity extends ActionBarActivity {
+
+
     /**
      * Game class
      */
@@ -51,7 +53,6 @@ public class SelectionActivity extends ActionBarActivity {
         round = bundle.getInt("ROUND", 0);
 
         playerIndicator = (TextView)findViewById(R.id.playerIndicator);
-        //playerIndicator.setText(game.getActivePlayer().getName());
         if(round == 0){
             if(cnt == 0){
                 playerIndicator.setText(game.getPlayer1().getName());
@@ -110,7 +111,6 @@ public class SelectionActivity extends ActionBarActivity {
         cnt++;
         if(round == 0){
             if (cnt == 1) {
-                Intent intent = new Intent(this, SelectionActivity.class);
                 game.getPlayer1().setBird(birdList.get(birdIndex));
                 playerIndicator.setText(game.getPlayer2().getName());
                 birdIndex = 0;
@@ -133,7 +133,6 @@ public class SelectionActivity extends ActionBarActivity {
         }
         if(round == 1){
             if (cnt == 1) {
-                Intent intent = new Intent(this, SelectionActivity.class);
                 game.getPlayer2().setBird(birdList.get(birdIndex));
                 playerIndicator.setText(game.getPlayer1().getName());
                 birdIndex = 0;
@@ -173,4 +172,43 @@ public class SelectionActivity extends ActionBarActivity {
         }
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle bundle) {
+        super.onSaveInstanceState(bundle);
+        bundle.putSerializable("GAME", game);
+        bundle.putInt("COUNT", cnt);
+        bundle.putInt("ROUND", round);
+        bundle.putInt("INDEX", birdIndex);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle bundle) {
+        super.onRestoreInstanceState(bundle);
+        game = (Game)bundle.getSerializable("GAME");
+        cnt = bundle.getInt("COUNT");
+        round = bundle.getInt("ROUND");
+        birdIndex = bundle.getInt("INDEX");
+
+        imgView.setImageResource(birdList.get(birdIndex).getBirdId());
+        imgView.invalidate();
+
+        if(round == 0){
+            if(cnt == 0){
+                playerIndicator.setText(game.getPlayer1().getName());
+            }
+            if(cnt == 1){
+                playerIndicator.setText(game.getPlayer2().getName());
+            }
+        }
+        //switch the order to pick the bird
+        if(round == 1){
+            if(cnt == 1){
+                playerIndicator.setText(game.getPlayer1().getName());
+            }
+            if(cnt == 0){
+                playerIndicator.setText(game.getPlayer2().getName());
+            }
+        }
+
+    }
 }

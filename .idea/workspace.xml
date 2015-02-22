@@ -22,7 +22,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7193b162-2e6e-44b9-8367-09d23b43ccc1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Game.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/SelectionActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/SelectionActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -50,10 +49,10 @@
       <file leaf-file-name="SelectionActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/SelectionActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31439394" vertical-offset="2161" max-vertical-offset="2924">
-              <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.9583333" vertical-offset="2858" max-vertical-offset="3570">
+              <caret line="192" column="29" selection-start-line="192" selection-start-column="29" selection-end-line="192" selection-end-column="29" />
               <folding>
-                <element signature="e#657#663#0" expanded="true" />
+                <element signature="e#659#665#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,8 +61,18 @@
       <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1547">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1547">
               <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1770" max-vertical-offset="2329">
+              <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -1187,7 +1196,11 @@
       <created>1424633512813</created>
       <updated>1424633512813</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="SelectionActivity does not start new actvity on player change.">
+      <created>1424635187327</created>
+      <updated>1424635187327</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1246,11 +1259,26 @@
     <MESSAGE value="Game stuff added to main activity" />
     <MESSAGE value="Switched Selection Activity to single view" />
     <MESSAGE value="Fixed array bounding on selection activity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed array bounding on selection activity" />
+    <MESSAGE value="SelectionActivity does not start new actvity on player change." />
+    <option name="LAST_COMMIT_MESSAGE" value="SelectionActivity does not start new actvity on player change." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="23" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/SelectionActivity.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/SelectionActivity.java</url>
+          <line>182</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="26" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1259,7 +1287,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="301" max-vertical-offset="1122">
           <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
           <folding>
-            <element signature="e#657#663#0" expanded="true" />
+            <element signature="e#659#665#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1340,7 +1368,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1122">
           <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
           <folding>
-            <element signature="e#657#663#0" expanded="true" />
+            <element signature="e#659#665#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1399,7 +1427,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1122">
           <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
           <folding>
-            <element signature="e#657#663#0" expanded="true" />
+            <element signature="e#659#665#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1466,7 +1494,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1037">
           <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
           <folding>
-            <element signature="e#657#663#0" expanded="true" />
+            <element signature="e#659#665#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1484,7 +1512,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="816">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="e#657#663#0" expanded="true" />
+            <element signature="e#659#665#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1656,14 +1684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33116883" vertical-offset="119" max-vertical-offset="2329">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1889" max-vertical-offset="2448">
@@ -1671,6 +1691,14 @@
           <folding>
             <element signature="e#934#935#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1770" max-vertical-offset="2329">
+          <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1684,10 +1712,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/SelectionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31439394" vertical-offset="2161" max-vertical-offset="2924">
-          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.9583333" vertical-offset="2858" max-vertical-offset="3570">
+          <caret line="192" column="29" selection-start-line="192" selection-start-column="29" selection-end-line="192" selection-end-column="29" />
           <folding>
-            <element signature="e#657#663#0" expanded="true" />
+            <element signature="e#659#665#0" expanded="true" />
           </folding>
         </state>
       </provider>
