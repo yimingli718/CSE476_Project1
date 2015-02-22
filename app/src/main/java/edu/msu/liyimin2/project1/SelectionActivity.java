@@ -155,12 +155,21 @@ public class SelectionActivity extends ActionBarActivity {
         }
     }
 
-    public void onNext(View view)
-    {
-        birdIndex++;
-        imgView.setImageResource(birdList.get(birdIndex).getBirdId());
-        imgView.invalidate();
+    public void onNext(View view) {
+        if(birdIndex != birdList.size()-1) {
+            birdIndex++;
+            imgView.setImageResource(birdList.get(birdIndex).getBirdId());
+            imgView.invalidate();
+        }
 
+    }
+
+    public void onPrev(View view){
+        if(birdIndex != 0) {
+            birdIndex--;
+            imgView.setImageResource(birdList.get(birdIndex).getBirdId());
+            imgView.invalidate();
+        }
     }
 
 }

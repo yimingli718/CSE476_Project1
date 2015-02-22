@@ -32,7 +32,7 @@
             android:text="@string/prev"
             android:id="@+id/prevButton"
             android:layout_alignParentLeft="true"
-            />
+            android:onClick="onPrev" />
 
 
         <Button
