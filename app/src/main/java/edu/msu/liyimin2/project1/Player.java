@@ -1,33 +1,41 @@
 package edu.msu.liyimin2.project1;
+import android.graphics.Canvas;
 
-import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Player {
-    //region "Member variables"
+public class Player implements Serializable {
+    //Player name
+    private String name = "player1";
+    //Score
+    public int score = 0;
+    //Bird chosen
+    private Bird bird = null;
 
-    /**
-     * Player name
-     */
-    public String name = "player1";
+    public Player(){
+    }
+    public String getName(){
+        return name;
+    }
+    public void setName(String n){
+        name = n;
+    }
+    public void setBird(Bird b){  bird = b;}
+    public Bird getBird() { return bird;}
+    public void addPoint() { score++; }
 
-    /**
-     * Score
-     */
-    public int score;
-
-    /**
-     * List of available birds to use
-     */
-    public ArrayList<Bird> birdList = new ArrayList<Bird>();
-
-    //endregion
-
-    //region "Constructor"
-
-    public Player()
-    {
-        score = 0;
+    public void drawBird(Canvas canvas){
+        bird.draw(canvas);
     }
 
-    //endregion
+    private synchronized void writeObject(java.io.ObjectOutputStream stream) throws java.
+            io.IOException {
+        stream.defaultWriteObject();
+        stream.writeObject(bird);
+    }
+
+    private synchronized void readObject(java.io.ObjectInputStream stream) throws java.
+            io.IOException, ClassNotFoundException {
+        stream.defaultReadObject();
+        bird = (Bird) stream.readObject();
+    }
 }

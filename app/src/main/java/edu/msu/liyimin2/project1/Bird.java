@@ -1,16 +1,19 @@
-package edu.msu.liyimin2.project1;import android.content.Context;
+package edu.msu.liyimin2.project1;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Rect;
-import android.util.Log;
+
+import java.io.ByteArrayOutputStream;
+import java.io.Serializable;
 
 /**
  * This is a starting point for a class for a bird. It includes functions to
  * load the bird image and to do collision detection against another bird.
  */
-public class Bird {
+public class Bird implements Serializable {
     /**
      * The image for the actual bird.
      */
@@ -36,10 +39,12 @@ public class Bird {
      */
     private float y = 0;
 
+    private int id;
+
     public Bird(Context context, int id) {
-        bird = BitmapFactory.decodeResource(context.getResources(), id);
         rect = new Rect();
-        setRect();
+        //setRect();
+        bird = BitmapFactory.decodeResource(context.getResources(), id);
     }
 
     public void move(float dx, float dy) {
@@ -101,5 +106,37 @@ public class Bird {
         }
 
         return false;
+    }
+
+    public void draw(Canvas canvas){
+        //canvas.save();
+        //canvas.translate(-bird.getWidth() / 2, -bird.getHeight()/2);
+        canvas.drawBitmap(bird, 0, 0 , null);
+        //canvas.restore();
+    }
+
+    private synchronized void writeObject(java.io.ObjectOutputStream stream) throws java.
+            io.IOException {
+        //stream.defaultWriteObject();
+
+        ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
+        bird.compress(Bitmap.CompressFormat.PNG, 0, byteStream);
+        byte bitmapBytes[] = byteStream.toByteArray();
+        stream.write(bitmapBytes, 0, bitmapBytes.length);
+        //stream.writeObject(bird);
+    }
+
+    private synchronized void readObject(java.io.ObjectInputStream stream) throws java.
+            io.IOException, ClassNotFoundException {
+        //stream.defaultReadObject();
+
+        ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
+        int b;
+        while((b = stream.read()) != -1)
+            byteStream.write(b);
+        byte bitmapBytes[] = byteStream.toByteArray();
+        bird = BitmapFactory.decodeByteArray(bitmapBytes, 0, bitmapBytes.length);
+
+        //bird = (Bird) stream.readObject();
     }
 }

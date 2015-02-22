@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Player_1"
-            android:id="@+id/playerText"
+            android:id="@+id/user"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1" />
 

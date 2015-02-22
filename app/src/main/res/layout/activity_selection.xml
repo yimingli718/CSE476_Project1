@@ -4,27 +4,28 @@
     tools:context="edu.msu.liyimin2.project1.SelectionActivity"
     android:orientation="vertical">
 
+    <view
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        class="edu.msu.liyimin2.project1.SelectionView"
+        android:id="@+id/selectionView"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="4" />
+
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/Player_1"
         android:id="@+id/playerIndicator"
-        android:layout_gravity="center_horizontal" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:id="@+id/birdImage"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/parrot"
-        android:contentDescription="@string/selectpicture"
-        android:layout_weight="3" />
+        android:editable="false"
+        android:layout_weight="0.5" />
 
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="0.5">
 
         <Button
             android:layout_width="wrap_content"
@@ -32,7 +33,7 @@
             android:text="@string/prev"
             android:id="@+id/prevButton"
             android:layout_alignParentLeft="true"
-             />
+            android:onClick="onPrev" />
 
 
         <Button
@@ -49,7 +50,8 @@
             android:layout_height="wrap_content"
             android:text="@string/next"
             android:id="@+id/nextButton"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentRight="true"
+            android:onClick="onNext" />
 
     </RelativeLayout>
 

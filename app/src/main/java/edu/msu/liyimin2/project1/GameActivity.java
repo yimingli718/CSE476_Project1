@@ -6,18 +6,52 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class GameActivity extends ActionBarActivity {
-
+    private Game game;
+    private int round = 0;
     private int cnt = 0;
-
-
+    private GameView gameView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        gameView = (GameView)this.findViewById(R.id.gameView);
+
+        Intent intent=this.getIntent();
+        Bundle bundle=intent.getExtras();
+        game=(Game)bundle.getSerializable("GAME");
+        cnt = bundle.getInt("COUNT", 0);
+        round = bundle.getInt("ROUND", 0);
+        TextView user = (TextView)findViewById(R.id.user);
+        if(round == 0) {
+            if (cnt == 0) {
+                user.setText(game.getPlayer1().getName());
+                gameView.setGame(game);
+                gameView.setPlayer(game.getPlayer1());
+            }
+            if (cnt == 1) {
+                user.setText(game.getPlayer2().getName());
+                gameView.setGame(game);
+                gameView.setPlayer(game.getPlayer2());
+            }
+        }
+        if(round == 1){
+            if (cnt == 1) {
+                user.setText(game.getPlayer1().getName());
+                gameView.setGame(game);
+                gameView.setPlayer(game.getPlayer1());
+            }
+            if (cnt == 0) {
+                user.setText(game.getPlayer2().getName());
+                gameView.setGame(game);
+                gameView.setPlayer(game.getPlayer2());
+            }
+        }
     }
 
 
@@ -45,10 +79,59 @@ public class GameActivity extends ActionBarActivity {
 
     public void onConfirm(View view) {
         cnt++;
-        if (cnt == 2) {
-            Intent intent = new Intent(this, FinalScore.class);
-            startActivity(intent);
-            cnt = 0;
+        game.ArchiveBird(gameView.getPlayer().getBird());
+        if(round == 0) {
+            if (cnt == 1) {
+                game.getPlayer1().addPoint();
+                Intent intent = new Intent(this, GameActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("GAME", game);
+                bundle.putInt("COUNT", cnt);
+                bundle.putInt("ROUND", round);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+
+            if (cnt == 2) {
+                game.getPlayer2().addPoint();
+                Intent intent = new Intent(this, SelectionActivity.class);
+                //Intent intent = new Intent(this, SelectionActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("GAME", game);
+                cnt = 0;
+                bundle.putInt("COUNT", cnt);
+                round++;
+                bundle.putInt("ROUND", round);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        }
+        if(round == 1){
+            if (cnt == 1) {
+                game.getPlayer2().addPoint();
+                Intent intent = new Intent(this, GameActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("GAME", game);
+                bundle.putInt("COUNT", cnt);
+                bundle.putInt("ROUND", round);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+
+            if (cnt == 2) {
+                game.getPlayer1().addPoint();
+                Intent intent = new Intent(this, SelectionActivity.class);
+                //Intent intent = new Intent(this, SelectionActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("GAME", game);
+                cnt = 0;
+                bundle.putInt("COUNT", cnt);
+                round = 0;
+                bundle.putInt("ROUND", round);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+
         }
     }
 }

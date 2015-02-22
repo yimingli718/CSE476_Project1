@@ -14,6 +14,7 @@ public class GameView extends View {
      * The actual game
      */
     private Game game;
+    private Player player;
 
     public GameView(Context context) {
         super(context);
@@ -32,8 +33,13 @@ public class GameView extends View {
 
     private void init(AttributeSet attrs, int defStyle) {
         game = new Game(getContext());
-
     }
+
+    public void setGame(Game g){game = g;}
+
+    public void setPlayer(Player p){player = p;}
+
+    public Player getPlayer() {return player;}
 
 
     @Override
@@ -41,5 +47,6 @@ public class GameView extends View {
         super.onDraw(canvas);
 
         game.draw(canvas);
+        player.drawBird(canvas);
     }
 }

@@ -16,15 +16,23 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 
 public class MainActivity extends ActionBarActivity {
-    public Game game = new Game();
+    ////?????/////////////////////
+    //////////////////////////////
+    private Game game;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        game = new Game();
 
         EditText player_1_text = (EditText) findViewById(R.id.player_1);
         player_1_text.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -32,8 +40,9 @@ public class MainActivity extends ActionBarActivity {
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
                 boolean handled = false;
                 if (i == EditorInfo.IME_ACTION_NEXT){
-                    game.player1.name = textView.getText().toString();
-                    Toast.makeText(MainActivity.this, "Player 1 name is: " + game.player1.name, Toast.LENGTH_SHORT).show();
+                    game.getPlayer1().setName(textView.getText().toString());
+                    Toast.makeText(MainActivity.this, "Player 1 name is: "
+                            + game.getPlayer1().getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 return handled;
@@ -47,9 +56,9 @@ public class MainActivity extends ActionBarActivity {
                 boolean handled = false;
                 if (i == EditorInfo.IME_ACTION_DONE) {
                     //show toast for input
-                    game.player2.name = textView.getText().toString();
+                    game.getPlayer2().setName(textView.getText().toString());
                     Toast.makeText(MainActivity.this, "Player 2 name is: "
-                            + game.player2.name, Toast.LENGTH_SHORT).show();
+                            + game.getPlayer2().getName(), Toast.LENGTH_SHORT).show();
 
                     //close keyboard and
                     InputMethodManager inputManager = (InputMethodManager)
@@ -63,6 +72,9 @@ public class MainActivity extends ActionBarActivity {
             }
         });
     }
+
+
+
 
 
     @Override
@@ -90,6 +102,11 @@ public class MainActivity extends ActionBarActivity {
     public void onStartGame(View view)
     {
         Intent intent = new Intent(this, SelectionActivity.class);
+        Bundle bundle = new Bundle();
+
+        bundle.putSerializable("GAME", game);
+        intent.putExtras(bundle);
+
         startActivity(intent);
     }
 
@@ -103,7 +120,4 @@ public class MainActivity extends ActionBarActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
-
-
-
 }

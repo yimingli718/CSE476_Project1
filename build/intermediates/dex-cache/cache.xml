@@ -2,32 +2,53 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Eming\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="C:\Users\Eming\CSE\2015_Spring\CSE476\Project1\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-b47c28c969db6464ff1e3a9e6168b5da62e4b6c2.jar" />
-    </item>
-    <item
-        jar="C:\Users\Eming\CSE\2015_Spring\CSE476\Project1\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Users\Eming\CSE\2015_Spring\CSE476\Project1\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-5d1b37c2cd9f25e3b32eae918d9cfb0f4c8aaf81.jar" />
-    </item>
-    <item
-        jar="C:\Users\Eming\CSE\2015_Spring\CSE476\Project1\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jar="/Users/EMing/Downloads/Project1/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\Eming\CSE\2015_Spring\CSE476\Project1\app\build\intermediates\pre-dexed\debug\classes-a12532de1e176660d6c47bcd3ceef4735bfc43b2.jar" />
+        <dex dex="/Users/EMing/Downloads/Project1/app/build/intermediates/pre-dexed/debug/classes-892cd33a0632856afdaf58e4dd4b4aa1e699e3c2.jar" />
     </item>
     <item
-        jar="C:\Users\Eming\CSE\2015_Spring\CSE476\Project1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jar="/Users/EMing/Work/2015_Spring/CSE476/Project1/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/EMing/Work/2015_Spring/CSE476/Project1/app/build/intermediates/pre-dexed/debug/classes-187b590acea25415730098d622335c38548b3821.jar" />
+    </item>
+    <item
+        jar="/Users/EMing/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/EMing/Work/2015_Spring/CSE476/Project1/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-d30904d1b35664c74b3648cae0c86066ba436f4e.jar" />
+    </item>
+    <item
+        jar="/Users/EMing/Downloads/Project1/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/EMing/Downloads/Project1/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-10205ddad2f0a3602daaeb32d1993950466e1ac9.jar" />
+    </item>
+    <item
+        jar="/Users/EMing/Downloads/Project1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\Eming\CSE\2015_Spring\CSE476\Project1\app\build\intermediates\pre-dexed\debug\classes-afc33b22fa51218e2bf07b0860c26f35b57a647c.jar" />
+        <dex dex="/Users/EMing/Downloads/Project1/app/build/intermediates/pre-dexed/debug/classes-2fb492d90b9b8d6a3b8b6ff0c8f554762cd1dea6.jar" />
+    </item>
+    <item
+        jar="/Users/EMing/Work/2015_Spring/CSE476/Project1/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/EMing/Work/2015_Spring/CSE476/Project1/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-c08ca950d8eb484392911c4d71901b259a8857b6.jar" />
+    </item>
+    <item
+        jar="/Users/EMing/Work/2015_Spring/CSE476/Project1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/EMing/Work/2015_Spring/CSE476/Project1/app/build/intermediates/pre-dexed/debug/classes-d35f202c50622be1a45e45b71539ec1855673972.jar" />
     </item>
 
 </items>
