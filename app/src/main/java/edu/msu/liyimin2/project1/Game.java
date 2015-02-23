@@ -47,10 +47,9 @@ public class Game implements Serializable {
     private float lastRelY;
 
     public Game(){
+
     }
 
-    public Game(Context context){
-    }
 
     private synchronized void writeObject(java.io.ObjectOutputStream stream) throws java.
             io.IOException {
@@ -125,11 +124,10 @@ public class Game implements Serializable {
 
         scaleFactor = (float)gameViewSize / (float)canvas.getWidth();
         // Draw the outline of the puzzle
-        //canvas.drawRect(marginX, marginY, marginX + gameViewSize, marginY +gameViewSize, fillPaint);
+        //fillPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        //fillPaint.setColor(0xffcccccc);
+        //canvas.drawRect(marginX, marginY, marginX + gameViewSize, marginY + gameViewSize, fillPaint);
 
-        //canvas.save();
-        //canvas.translate(marginX, marginY);
-        //canvas.scale(scaleFactor, scaleFactor);
         for(Bird b : birds){
             b.draw(canvas, marginX, marginY, gameViewSize, scaleFactor);
         }
