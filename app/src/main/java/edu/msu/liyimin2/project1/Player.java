@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 public class Player implements Serializable {
     //Player name
-    private String name = "Player";
+    private String name;
     //Score
     private int score = 0;
     //Bird chosen
@@ -16,8 +16,8 @@ public class Player implements Serializable {
     public String getName(){
         return name;
     }
-    public void setName(String n){
-        name = n;
+    public void setName(String s){
+        name = s;
     }
     public void setBird(Bird b){  bird = b;}
     public Bird getBird() { return bird;}
@@ -40,4 +40,5 @@ public class Player implements Serializable {
         stream.defaultReadObject();
         bird = (Bird) stream.readObject();
     }
+
 }
