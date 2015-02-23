@@ -94,7 +94,9 @@ public class Game implements Serializable {
     }
 
     public boolean checkCollision(Bird activeBird){
+        //activeBird.setRect();
         for(Bird b: birds){
+            //b.setRect();
             if(activeBird.collisionTest(b)){
                 return true;
             }

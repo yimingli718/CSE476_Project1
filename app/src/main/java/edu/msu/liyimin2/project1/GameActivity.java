@@ -59,11 +59,13 @@ public class GameActivity extends ActionBarActivity {
     }
 
     public void onConfirm(View view) {
-        /*if(game.checkCollision(game.getActivePlayer().getBird())){
+        game.updateBirds(getBaseContext());
+        if(game.checkCollision(game.getActivePlayer().getBird())){
             Intent intent = new Intent(this, FinalScore.class);
             startActivity(intent);
-        }*/
-        if(!moveOn){
+            this.finish();
+        }
+        else if(!moveOn){
             moveOn = true;
             //gameView.setPlayer(game.getActivePlayer());
             game.getActivePlayer().addPoint();
@@ -73,7 +75,6 @@ public class GameActivity extends ActionBarActivity {
             user.setText(game.getActivePlayer().getName());
             gameView.setGame(game);
             gameView.invalidate();
-
         }
         else{
             moveOn = false;

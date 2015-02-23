@@ -93,7 +93,7 @@ public class Bird implements Serializable {
         if(!Rect.intersects(rect, other.rect)) {
             return false;
         }
-
+        overlap = new Rect();
         // Determine where the two images overlap
         overlap.set(rect);
         overlap.intersect(other.rect);
@@ -178,7 +178,7 @@ public class Bird implements Serializable {
 
     //region Getters and Setters
 
-    private void setRect() {
+    public void setRect() {
         rect = new Rect((int)x, (int)y, (int)x+bird.getWidth(), (int)y+bird.getHeight());
     }
 
