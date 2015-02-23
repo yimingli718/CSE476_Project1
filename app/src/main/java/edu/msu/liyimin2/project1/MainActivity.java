@@ -16,9 +16,6 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
     private Game game;
-    private String player_1 = "Player 1";
-    private String player_2 = "Player 2";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,16 +65,16 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(this, SelectionActivity.class);
         Bundle bundle = new Bundle();
 
-    if ((((EditText) findViewById(R.id.player_1)).getText().toString()).length() == 0
-            || (((EditText) findViewById(R.id.player_2)).getText().toString()).length() == 0)
-    {
-        game.getPlayer1().setName(player_1);
-        game.getPlayer2().setName(player_2);
-    }
-    else{
-        game.getPlayer1().setName(((EditText) findViewById(R.id.player_1)).getText().toString());
-        game.getPlayer2().setName(((EditText) findViewById(R.id.player_2)).getText().toString());
-    }
+        if ((((EditText) findViewById(R.id.player_1)).getText().toString()).length() == 0
+                || (((EditText) findViewById(R.id.player_2)).getText().toString()).length() == 0)
+        {
+            game.getPlayer1().setName(getResources().getString(R.string.player_1_name));
+            game.getPlayer2().setName(getResources().getString(R.string.player_2_name));
+        }
+        else{
+            game.getPlayer1().setName(((EditText) findViewById(R.id.player_1)).getText().toString());
+            game.getPlayer2().setName(((EditText) findViewById(R.id.player_2)).getText().toString());
+        }
 
         bundle.putSerializable("GAME", game);
         intent.putExtras(bundle);
