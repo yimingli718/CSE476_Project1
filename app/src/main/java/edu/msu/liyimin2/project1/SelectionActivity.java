@@ -81,7 +81,7 @@ public class SelectionActivity extends ActionBarActivity {
 
     public void onSelect(View view)
     {
-        game.getActivePlayer().setBird(birdList.get(birdIndex));
+        game.getActivePlayer().setBird(new Bird(getBaseContext(), birdList.get(birdIndex).getBirdId()));
         if(!moveOn){
             moveOn = true;
             game.nextPlayer();
