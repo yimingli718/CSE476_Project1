@@ -75,8 +75,7 @@ public class Bird implements Serializable {
         int pX = (int)((testX - x));
         int pY = (int)((testY - y));
 
-        if(pX < 0 || pX >= bird.getWidth() ||
-                pY < 0 || pY >= bird.getHeight()) {
+        if(pX < 0 || pX >= bird.getWidth() || pY < 0 || pY >= bird.getHeight()) {
             return false;
         }
 

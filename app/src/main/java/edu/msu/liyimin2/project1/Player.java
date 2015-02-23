@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 public class Player implements Serializable {
     //Player name
-    private String name = "player1";
+    private String name = "Player";
     //Score
     public int score = 0;
     //Bird chosen
@@ -31,7 +31,7 @@ public class Player implements Serializable {
     }
 
     private synchronized void writeObject(java.io.ObjectOutputStream stream) throws java.
-            io.IOException {
+        io.IOException {
         stream.defaultWriteObject();
         stream.writeObject(bird);
     }

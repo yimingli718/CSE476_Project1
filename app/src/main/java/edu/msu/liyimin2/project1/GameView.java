@@ -33,7 +33,7 @@ public class GameView extends View {
     }
 
     private void init(AttributeSet attrs, int defStyle) {
-        game = new Game(getContext());
+        game = new Game();
     }
 
     @Override

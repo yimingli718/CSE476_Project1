@@ -32,7 +32,6 @@ public class GameActivity extends ActionBarActivity {
         user.setText(game.getActivePlayer().getName());
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -66,6 +65,7 @@ public class GameActivity extends ActionBarActivity {
             user.setText(game.getActivePlayer().getName());
             gameView.setGame(game);
             gameView.invalidate();
+
         }
         else{
             moveOn = false;
@@ -76,6 +76,13 @@ public class GameActivity extends ActionBarActivity {
             bundle.putSerializable("GAME", game);
             intent.putExtras(bundle);
             startActivity(intent);
+            this.finish();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        // do something on back.
+        this.finish();
     }
 }
