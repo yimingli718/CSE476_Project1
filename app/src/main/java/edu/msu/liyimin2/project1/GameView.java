@@ -122,7 +122,7 @@ public class GameView extends View {
 
         scaleFactor = (float)gameViewSize / (float)canvas.getWidth();
 
-        game.draw(canvas);
+        game.draw(canvas, marginX, marginY, gameViewSize, scaleFactor);
         game.getActivePlayer().drawBird(canvas, getMarginX(), getMarginY(), getGameViewSize(), getScaleFactor());
     }
 

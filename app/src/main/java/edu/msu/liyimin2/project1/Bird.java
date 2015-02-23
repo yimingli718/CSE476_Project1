@@ -19,17 +19,17 @@ public class Bird implements Serializable {
     /**
      * The image for the actual bird.
      */
-    private Bitmap bird;
+    private transient Bitmap bird;
 
     /**
      * Rectangle that is where our bird is.
      */
-    private Rect rect;
+    private transient Rect rect;
 
     /**
      * Rectangle we will use for intersection testing
      */
-    private Rect overlap = new Rect();
+    private transient Rect overlap = new Rect();
 
     /**
      * x location in pixels
@@ -41,9 +41,7 @@ public class Bird implements Serializable {
      */
     private float y = 0;
 
-    public int getBirdId() {
-        return birdId;
-    }
+
 
     private int birdId;
 
@@ -52,7 +50,7 @@ public class Bird implements Serializable {
     public Bird(Context context, int id) {
         rect = new Rect();
         ///!!!!ATTENTION!!!!DISABLE BECAUSE NOT WORKING!!!///
-        // setRect();
+        //setRect();
         bird = BitmapFactory.decodeResource(context.getResources(), id);
         birdId = id;
     }
@@ -123,33 +121,32 @@ public class Bird implements Serializable {
 
     private synchronized void writeObject(java.io.ObjectOutputStream stream) throws java.
             io.IOException {
-        //stream.defaultWriteObject();
         stream.writeFloat(x);
         stream.writeFloat(y);
-        ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
+        stream.writeInt(birdId);
+        /*ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
         bird.compress(Bitmap.CompressFormat.PNG, 0, byteStream);
         byte bitmapBytes[] = byteStream.toByteArray();
-        stream.write(bitmapBytes, 0, bitmapBytes.length);
-
-        //stream.writeFloat(y);
+        stream.write(bitmapBytes, 0, bitmapBytes.length);*/
     }
 
     private synchronized void readObject(java.io.ObjectInputStream stream) throws java.
             io.IOException, ClassNotFoundException {
-        //stream.defaultReadObject();
         x = stream.readFloat();
         y = stream.readFloat();
-        ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
+        birdId = stream.readInt();
+        /*ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
         int b;
         while((b = stream.read()) != -1)
             byteStream.write(b);
         byte bitmapBytes[] = byteStream.toByteArray();
         bird = BitmapFactory.decodeByteArray(bitmapBytes, 0, bitmapBytes.length);
-
-        //y = stream.readFloat();
+        */
     }
 
     public void draw(Canvas canvas, int marginX, int marginY, int gameViewSize, float scaleFactor) {
+        //setRect();
+
         canvas.save();
         // Convert x,y to pixels and add the margin, then draw
         canvas.translate(marginX + x * gameViewSize, marginY + y * gameViewSize);
@@ -174,11 +171,14 @@ public class Bird implements Serializable {
         return (bird.getPixel(pX, pY) & 0xff000000) != 0;
     }
 
+    public void update(Context context){
+        bird = BitmapFactory.decodeResource(context.getResources(), birdId);
+    }
 
     //region Getters and Setters
 
     private void setRect() {
-        rect.set((int)x, (int)y, (int)x+bird.getWidth(), (int)y+bird.getHeight());
+        rect.set((int)x, (int)y, (int)x, (int)y);
     }
 
     public void setX(float x) {
@@ -189,5 +189,8 @@ public class Bird implements Serializable {
         this.y = y;
     }
 
+    public int getBirdId() {
+        return birdId;
+    }
     //endregion
 }

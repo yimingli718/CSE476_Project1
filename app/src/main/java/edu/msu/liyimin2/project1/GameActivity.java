@@ -26,11 +26,14 @@ public class GameActivity extends ActionBarActivity {
         Intent intent=this.getIntent();
         Bundle bundle=intent.getExtras();
         game=(Game)bundle.getSerializable("GAME");
+        game.updateBirds(getBaseContext());
 
         gameView.setGame(game);
 
         TextView user = (TextView)findViewById(R.id.user);
         user.setText(game.getActivePlayer().getName());
+
+
     }
 
     @Override

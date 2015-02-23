@@ -17,7 +17,7 @@ import android.widget.Toast;
 public class MainActivity extends ActionBarActivity {
     private Game game;
     private String player_1 = "Player 1";
-    private String player_2 = "PLayer 2";
+    private String player_2 = "Player 2";
 
 
     @Override
