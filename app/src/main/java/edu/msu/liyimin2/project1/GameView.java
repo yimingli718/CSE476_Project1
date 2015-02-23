@@ -80,6 +80,7 @@ public class GameView extends View {
 
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_CANCEL:
+
                 //Log.i("onTouchEvent", "ACTION_UP");
                 break;
 
