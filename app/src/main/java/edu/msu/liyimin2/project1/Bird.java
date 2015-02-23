@@ -24,7 +24,7 @@ public class Bird implements Serializable {
     /**
      * Rectangle that is where our bird is.
      */
-    private transient Rect rect;
+    private transient Rect rect = new Rect();
 
     /**
      * Rectangle we will use for intersection testing
@@ -173,12 +173,13 @@ public class Bird implements Serializable {
 
     public void update(Context context){
         bird = BitmapFactory.decodeResource(context.getResources(), birdId);
+        setRect();
     }
 
     //region Getters and Setters
 
     private void setRect() {
-        rect.set((int)x, (int)y, (int)x, (int)y);
+        rect = new Rect((int)x, (int)y, (int)x+bird.getWidth(), (int)y+bird.getHeight());
     }
 
     public void setX(float x) {

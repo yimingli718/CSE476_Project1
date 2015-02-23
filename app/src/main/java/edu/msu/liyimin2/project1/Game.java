@@ -92,4 +92,14 @@ public class Game implements Serializable {
             b.update(context);
         }
     }
+
+    public boolean checkCollision(Bird activeBird){
+        for(Bird b: birds){
+            if(activeBird.collisionTest(b)){
+                return true;
+            }
+        }
+        return false;
+
+    }
 }
