@@ -71,11 +71,6 @@ public class Bird implements Serializable {
 
     }
 
-    private void setRect() {
-        rect.set((int)x, (int)y, (int)x+bird.getWidth(), (int)y+bird.getHeight());
-    }
-
-
     public boolean hit(float testX, float testY) {
         int pX = (int)((testX - x));
         int pY = (int)((testY - y));
@@ -130,24 +125,29 @@ public class Bird implements Serializable {
     private synchronized void writeObject(java.io.ObjectOutputStream stream) throws java.
             io.IOException {
         //stream.defaultWriteObject();
-
+        stream.writeFloat(x);
+        stream.writeFloat(y);
         ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
         bird.compress(Bitmap.CompressFormat.PNG, 0, byteStream);
         byte bitmapBytes[] = byteStream.toByteArray();
         stream.write(bitmapBytes, 0, bitmapBytes.length);
-        //stream.writeObject(bird);
+
+        //stream.writeFloat(y);
     }
 
     private synchronized void readObject(java.io.ObjectInputStream stream) throws java.
             io.IOException, ClassNotFoundException {
         //stream.defaultReadObject();
-
+        x = stream.readFloat();
+        y = stream.readFloat();
         ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
         int b;
         while((b = stream.read()) != -1)
             byteStream.write(b);
         byte bitmapBytes[] = byteStream.toByteArray();
         bird = BitmapFactory.decodeByteArray(bitmapBytes, 0, bitmapBytes.length);
+
+        //y = stream.readFloat();
     }
 
     public void draw(Canvas canvas, int marginX, int marginY, int gameViewSize, float scaleFactor) {
@@ -174,4 +174,21 @@ public class Bird implements Serializable {
         // Are we touching actual picture?
         return (bird.getPixel(pX, pY) & 0xff000000) != 0;
     }
+
+
+    //region Getters and Setters
+
+    private void setRect() {
+        rect.set((int)x, (int)y, (int)x+bird.getWidth(), (int)y+bird.getHeight());
+    }
+
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public void setY(float y) {
+        this.y = y;
+    }
+
+    //endregion
 }

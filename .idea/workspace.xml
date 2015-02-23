@@ -36,7 +36,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7193b162-2e6e-44b9-8367-09d23b43ccc1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameView.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cse476_project1.iws" />
@@ -63,7 +63,7 @@
       <file leaf-file-name="SelectionActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/SelectionActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1411" max-vertical-offset="2448">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1258" max-vertical-offset="2295">
               <caret line="83" column="50" selection-start-line="83" selection-start-column="50" selection-end-line="83" selection-end-column="50" />
               <folding />
             </state>
@@ -83,8 +83,8 @@
       <file leaf-file-name="GameView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1702" max-vertical-offset="2567">
-              <caret line="136" column="24" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1379" max-vertical-offset="2584">
+              <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -93,7 +93,7 @@
       <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1581">
+            <state vertical-scroll-proportion="0.0" vertical-offset="172" max-vertical-offset="1445">
               <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
@@ -103,7 +103,7 @@
       <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="833">
+            <state vertical-scroll-proportion="0.0" vertical-offset="172" max-vertical-offset="731">
               <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
@@ -113,20 +113,17 @@
       <file leaf-file-name="Bird.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3649374" vertical-offset="68" max-vertical-offset="663">
-              <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1666">
+              <caret line="127" column="29" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
               <folding>
-                <element signature="e#478#503#0" expanded="false" />
-                <element signature="method#Bird#0;class#Bird#0" expanded="false" />
                 <element signature="method#move#0;class#Bird#0" expanded="false" />
-                <element signature="method#setRect#0;class#Bird#0" expanded="false" />
                 <element signature="method#hit#0;class#Bird#0" expanded="false" />
                 <element signature="docComment;method#collisionTest#0;class#Bird#0" expanded="false" />
                 <element signature="method#collisionTest#0;class#Bird#0" expanded="false" />
-                <element signature="method#writeObject#0;class#Bird#0" expanded="false" />
-                <element signature="method#readObject#0;class#Bird#0" expanded="false" />
                 <element signature="method#draw#0;class#Bird#0" expanded="false" />
                 <element signature="method#hit#1;class#Bird#0" expanded="false" />
+                <element signature="e#5483#5511#0" expanded="false" />
+                <element signature="method#setRect#0;class#Bird#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1111,8 +1108,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Player.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/SelectionActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Game.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java" />
       </list>
     </option>
@@ -1454,7 +1451,11 @@
       <created>1424726176091</created>
       <updated>1424726176091</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Moved some game class function to gameview">
+      <created>1424726509615</created>
+      <updated>1424726509615</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1486,21 +1487,21 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2793867" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.62521297" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39863715" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39863715" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5229983" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5229983" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298292" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1913767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4141252" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32367972" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1547,29 +1548,17 @@
           <properties />
           <option name="timeStamp" value="56" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java</url>
+          <line>142</line>
+          <properties />
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="61" />
+      <option name="time" value="71" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1479">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1921" max-vertical-offset="2142">
-          <caret line="113" column="27" selection-start-line="113" selection-start-column="27" selection-end-line="113" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1105">
@@ -1599,17 +1588,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="986" max-vertical-offset="2873">
           <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding>
-            <element signature="e#478#503#0" expanded="false" />
-            <element signature="method#Bird#0;class#Bird#0" expanded="false" />
             <element signature="method#move#0;class#Bird#0" expanded="false" />
-            <element signature="method#setRect#0;class#Bird#0" expanded="false" />
             <element signature="method#hit#0;class#Bird#0" expanded="false" />
             <element signature="docComment;method#collisionTest#0;class#Bird#0" expanded="false" />
             <element signature="method#collisionTest#0;class#Bird#0" expanded="false" />
-            <element signature="method#writeObject#0;class#Bird#0" expanded="false" />
-            <element signature="method#readObject#0;class#Bird#0" expanded="false" />
             <element signature="method#draw#0;class#Bird#0" expanded="false" />
             <element signature="method#hit#1;class#Bird#0" expanded="false" />
+            <element signature="e#5483#5511#0" expanded="false" />
+            <element signature="method#setRect#0;class#Bird#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1646,17 +1632,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1955" max-vertical-offset="2091">
           <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
           <folding>
-            <element signature="e#478#503#0" expanded="false" />
-            <element signature="method#Bird#0;class#Bird#0" expanded="false" />
             <element signature="method#move#0;class#Bird#0" expanded="false" />
-            <element signature="method#setRect#0;class#Bird#0" expanded="false" />
             <element signature="method#hit#0;class#Bird#0" expanded="false" />
             <element signature="docComment;method#collisionTest#0;class#Bird#0" expanded="false" />
             <element signature="method#collisionTest#0;class#Bird#0" expanded="false" />
-            <element signature="method#writeObject#0;class#Bird#0" expanded="false" />
-            <element signature="method#readObject#0;class#Bird#0" expanded="false" />
             <element signature="method#draw#0;class#Bird#0" expanded="false" />
             <element signature="method#hit#1;class#Bird#0" expanded="false" />
+            <element signature="e#5483#5511#0" expanded="false" />
+            <element signature="method#setRect#0;class#Bird#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1708,17 +1691,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1785">
           <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
           <folding>
-            <element signature="e#478#503#0" expanded="false" />
-            <element signature="method#Bird#0;class#Bird#0" expanded="false" />
             <element signature="method#move#0;class#Bird#0" expanded="false" />
-            <element signature="method#setRect#0;class#Bird#0" expanded="false" />
             <element signature="method#hit#0;class#Bird#0" expanded="false" />
             <element signature="docComment;method#collisionTest#0;class#Bird#0" expanded="false" />
             <element signature="method#collisionTest#0;class#Bird#0" expanded="false" />
-            <element signature="method#writeObject#0;class#Bird#0" expanded="false" />
-            <element signature="method#readObject#0;class#Bird#0" expanded="false" />
             <element signature="method#draw#0;class#Bird#0" expanded="false" />
             <element signature="method#hit#1;class#Bird#0" expanded="false" />
+            <element signature="e#5483#5511#0" expanded="false" />
+            <element signature="method#setRect#0;class#Bird#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1770,17 +1750,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="627" max-vertical-offset="1921">
           <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
           <folding>
-            <element signature="e#478#503#0" expanded="false" />
-            <element signature="method#Bird#0;class#Bird#0" expanded="false" />
             <element signature="method#move#0;class#Bird#0" expanded="false" />
-            <element signature="method#setRect#0;class#Bird#0" expanded="false" />
             <element signature="method#hit#0;class#Bird#0" expanded="false" />
             <element signature="docComment;method#collisionTest#0;class#Bird#0" expanded="false" />
             <element signature="method#collisionTest#0;class#Bird#0" expanded="false" />
-            <element signature="method#writeObject#0;class#Bird#0" expanded="false" />
-            <element signature="method#readObject#0;class#Bird#0" expanded="false" />
             <element signature="method#draw#0;class#Bird#0" expanded="false" />
             <element signature="method#hit#1;class#Bird#0" expanded="false" />
+            <element signature="e#5483#5511#0" expanded="false" />
+            <element signature="method#setRect#0;class#Bird#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1980,21 +1957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/com/android/internal/os/RuntimeInit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33164558" vertical-offset="549" max-vertical-offset="6664">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="833">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/SelectionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1141" max-vertical-offset="2261">
@@ -2003,10 +1965,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Game.java">
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/com/android/internal/os/RuntimeInit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1581">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.84436494" vertical-offset="412" max-vertical-offset="6664">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/app/Instrumentation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23434705" vertical-offset="1739" max-vertical-offset="31314">
+          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <folding>
+            <element signature="e#6363#6364#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/java/lang/ThreadGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11449016" vertical-offset="11071" max-vertical-offset="11815">
+          <caret line="692" column="0" selection-start-line="692" selection-start-column="0" selection-end-line="692" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="833">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2021,28 +2009,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1702" max-vertical-offset="2567">
-          <caret line="136" column="24" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1379" max-vertical-offset="2584">
+          <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1581">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3649374" vertical-offset="68" max-vertical-offset="663">
-          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1666">
+          <caret line="127" column="29" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
           <folding>
-            <element signature="e#478#503#0" expanded="false" />
-            <element signature="method#Bird#0;class#Bird#0" expanded="false" />
             <element signature="method#move#0;class#Bird#0" expanded="false" />
-            <element signature="method#setRect#0;class#Bird#0" expanded="false" />
             <element signature="method#hit#0;class#Bird#0" expanded="false" />
             <element signature="docComment;method#collisionTest#0;class#Bird#0" expanded="false" />
             <element signature="method#collisionTest#0;class#Bird#0" expanded="false" />
-            <element signature="method#writeObject#0;class#Bird#0" expanded="false" />
-            <element signature="method#readObject#0;class#Bird#0" expanded="false" />
             <element signature="method#draw#0;class#Bird#0" expanded="false" />
             <element signature="method#hit#1;class#Bird#0" expanded="false" />
+            <element signature="e#5483#5511#0" expanded="false" />
+            <element signature="method#setRect#0;class#Bird#0" expanded="false" />
           </folding>
         </state>
       </provider>
