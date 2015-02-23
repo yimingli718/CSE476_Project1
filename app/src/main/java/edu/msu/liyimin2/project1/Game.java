@@ -124,7 +124,7 @@ public class Game implements Serializable {
         marginY = (hit - gameViewSize) / 2;
 
         scaleFactor = (float)gameViewSize / (float)canvas.getWidth();
-        // Draw the outline of the puzzle
+        //Draw the outline of the puzzle
         //canvas.drawRect(marginX, marginY, marginX + gameViewSize, marginY +gameViewSize, fillPaint);
 
         //canvas.save();
