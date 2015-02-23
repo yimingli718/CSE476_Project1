@@ -62,8 +62,11 @@ public class GameView extends View {
 
     //endregion
 
-    private void init(AttributeSet attrs, int defStyle) {
+    private void init(AttributeSet attrs, int defStyle)
+    {
         game = new Game();
+        fillPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        fillPaint.setColor(0xffcccccc);
     }
 
     @Override
@@ -108,6 +111,11 @@ public class GameView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
+
+
+
+
+
         super.onDraw(canvas);
 
         int wid = canvas.getWidth();
@@ -120,8 +128,11 @@ public class GameView extends View {
         marginX = (wid - gameViewSize) / 2;
         marginY = (hit - gameViewSize) / 2;
 
+
         scaleFactor = (float)gameViewSize / (float)canvas.getWidth();
 
+
+        canvas.drawRect(marginX, marginY, marginX + gameViewSize, marginY + gameViewSize, fillPaint);
         game.draw(canvas, marginX, marginY, gameViewSize, scaleFactor);
         game.getActivePlayer().drawBird(canvas, getMarginX(), getMarginY(), getGameViewSize(), getScaleFactor());
     }
