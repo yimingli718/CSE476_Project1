@@ -77,6 +77,7 @@ public class GameActivity extends ActionBarActivity {
             bundle.putSerializable("GAME", game);
             intent.putExtras(bundle);
             startActivity(intent);
+            this.finish();
         }
     }
 }

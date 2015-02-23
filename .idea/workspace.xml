@@ -34,20 +34,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: edu.msu.liyimin2.project1" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7193b162-2e6e-44b9-8367-09d23b43ccc1" name="Default" comment="MERGED EVERYTHING AND IT WORKS">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/model_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/model_data.bin" />
+    <list default="true" id="7193b162-2e6e-44b9-8367-09d23b43ccc1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Game.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameView.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Player.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/SelectionActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/SelectionActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_21_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_21_0_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_21_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_21_0_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_21_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_21_0_3.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cse476_project1.iws" />
@@ -84,18 +73,18 @@
       <file leaf-file-name="GameActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1394">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1411">
+              <caret line="68" column="34" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameView.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2432916" vertical-offset="1770" max-vertical-offset="2567">
-              <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1702" max-vertical-offset="2567">
+              <caret line="136" column="24" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -121,12 +110,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bird.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Bird.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="2873">
-              <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-              <folding />
+            <state vertical-scroll-proportion="0.3649374" vertical-offset="68" max-vertical-offset="663">
+              <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+              <folding>
+                <element signature="e#478#503#0" expanded="false" />
+                <element signature="method#Bird#0;class#Bird#0" expanded="false" />
+                <element signature="method#move#0;class#Bird#0" expanded="false" />
+                <element signature="method#setRect#0;class#Bird#0" expanded="false" />
+                <element signature="method#hit#0;class#Bird#0" expanded="false" />
+                <element signature="docComment;method#collisionTest#0;class#Bird#0" expanded="false" />
+                <element signature="method#collisionTest#0;class#Bird#0" expanded="false" />
+                <element signature="method#writeObject#0;class#Bird#0" expanded="false" />
+                <element signature="method#readObject#0;class#Bird#0" expanded="false" />
+                <element signature="method#draw#0;class#Bird#0" expanded="false" />
+                <element signature="method#hit#1;class#Bird#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1109,10 +1110,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Player.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/SelectionActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Game.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java" />
       </list>
     </option>
   </component>
@@ -1449,7 +1450,11 @@
       <created>1424637252615</created>
       <updated>1424637252615</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Moved some game class function to gameview">
+      <created>1424726176091</created>
+      <updated>1424726176091</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1530,7 +1535,8 @@
     <MESSAGE value="Fixed array bounding on selection activity" />
     <MESSAGE value="SelectionActivity does not start new actvity on player change." />
     <MESSAGE value="SelectionActivity saves state between landscape and portrait mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="SelectionActivity saves state between landscape and portrait mode" />
+    <MESSAGE value="Moved some game class function to gameview" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved some game class function to gameview" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1592,7 +1598,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="986" max-vertical-offset="2873">
           <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#478#503#0" expanded="false" />
+            <element signature="method#Bird#0;class#Bird#0" expanded="false" />
+            <element signature="method#move#0;class#Bird#0" expanded="false" />
+            <element signature="method#setRect#0;class#Bird#0" expanded="false" />
+            <element signature="method#hit#0;class#Bird#0" expanded="false" />
+            <element signature="docComment;method#collisionTest#0;class#Bird#0" expanded="false" />
+            <element signature="method#collisionTest#0;class#Bird#0" expanded="false" />
+            <element signature="method#writeObject#0;class#Bird#0" expanded="false" />
+            <element signature="method#readObject#0;class#Bird#0" expanded="false" />
+            <element signature="method#draw#0;class#Bird#0" expanded="false" />
+            <element signature="method#hit#1;class#Bird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1627,7 +1645,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1955" max-vertical-offset="2091">
           <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#478#503#0" expanded="false" />
+            <element signature="method#Bird#0;class#Bird#0" expanded="false" />
+            <element signature="method#move#0;class#Bird#0" expanded="false" />
+            <element signature="method#setRect#0;class#Bird#0" expanded="false" />
+            <element signature="method#hit#0;class#Bird#0" expanded="false" />
+            <element signature="docComment;method#collisionTest#0;class#Bird#0" expanded="false" />
+            <element signature="method#collisionTest#0;class#Bird#0" expanded="false" />
+            <element signature="method#writeObject#0;class#Bird#0" expanded="false" />
+            <element signature="method#readObject#0;class#Bird#0" expanded="false" />
+            <element signature="method#draw#0;class#Bird#0" expanded="false" />
+            <element signature="method#hit#1;class#Bird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1677,7 +1707,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1785">
           <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="e#478#503#0" expanded="false" />
+            <element signature="method#Bird#0;class#Bird#0" expanded="false" />
+            <element signature="method#move#0;class#Bird#0" expanded="false" />
+            <element signature="method#setRect#0;class#Bird#0" expanded="false" />
+            <element signature="method#hit#0;class#Bird#0" expanded="false" />
+            <element signature="docComment;method#collisionTest#0;class#Bird#0" expanded="false" />
+            <element signature="method#collisionTest#0;class#Bird#0" expanded="false" />
+            <element signature="method#writeObject#0;class#Bird#0" expanded="false" />
+            <element signature="method#readObject#0;class#Bird#0" expanded="false" />
+            <element signature="method#draw#0;class#Bird#0" expanded="false" />
+            <element signature="method#hit#1;class#Bird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1727,7 +1769,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="627" max-vertical-offset="1921">
           <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-          <folding />
+          <folding>
+            <element signature="e#478#503#0" expanded="false" />
+            <element signature="method#Bird#0;class#Bird#0" expanded="false" />
+            <element signature="method#move#0;class#Bird#0" expanded="false" />
+            <element signature="method#setRect#0;class#Bird#0" expanded="false" />
+            <element signature="method#hit#0;class#Bird#0" expanded="false" />
+            <element signature="docComment;method#collisionTest#0;class#Bird#0" expanded="false" />
+            <element signature="method#collisionTest#0;class#Bird#0" expanded="false" />
+            <element signature="method#writeObject#0;class#Bird#0" expanded="false" />
+            <element signature="method#readObject#0;class#Bird#0" expanded="false" />
+            <element signature="method#draw#0;class#Bird#0" expanded="false" />
+            <element signature="method#hit#1;class#Bird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1957,27 +2011,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="2873">
-          <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1496">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1411">
+          <caret line="68" column="34" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2432916" vertical-offset="1770" max-vertical-offset="2567">
-          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1702" max-vertical-offset="2567">
+          <caret line="136" column="24" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3649374" vertical-offset="68" max-vertical-offset="663">
+          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+          <folding>
+            <element signature="e#478#503#0" expanded="false" />
+            <element signature="method#Bird#0;class#Bird#0" expanded="false" />
+            <element signature="method#move#0;class#Bird#0" expanded="false" />
+            <element signature="method#setRect#0;class#Bird#0" expanded="false" />
+            <element signature="method#hit#0;class#Bird#0" expanded="false" />
+            <element signature="docComment;method#collisionTest#0;class#Bird#0" expanded="false" />
+            <element signature="method#collisionTest#0;class#Bird#0" expanded="false" />
+            <element signature="method#writeObject#0;class#Bird#0" expanded="false" />
+            <element signature="method#readObject#0;class#Bird#0" expanded="false" />
+            <element signature="method#draw#0;class#Bird#0" expanded="false" />
+            <element signature="method#hit#1;class#Bird#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

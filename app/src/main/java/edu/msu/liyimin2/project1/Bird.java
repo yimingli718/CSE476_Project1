@@ -14,6 +14,8 @@ import java.io.Serializable;
  * load the bird image and to do collision detection against another bird.
  */
 public class Bird implements Serializable {
+    //region Member Variables
+
     /**
      * The image for the actual bird.
      */
@@ -45,6 +47,8 @@ public class Bird implements Serializable {
 
     private int birdId;
 
+    //endregion
+
     public Bird(Context context, int id) {
         rect = new Rect();
         ///!!!!ATTENTION!!!!DISABLE BECAUSE NOT WORKING!!!///
@@ -70,6 +74,7 @@ public class Bird implements Serializable {
     private void setRect() {
         rect.set((int)x, (int)y, (int)x+bird.getWidth(), (int)y+bird.getHeight());
     }
+
 
     public boolean hit(float testX, float testY) {
         int pX = (int)((testX - x));
