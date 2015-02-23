@@ -86,7 +86,6 @@ public class MainActivity extends ActionBarActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
         builder.setTitle(R.string.HelpTitle);
         builder.setMessage(R.string.Help);
-        // Create the dialog box and show it
         builder.setPositiveButton(android.R.string.ok, null);
         AlertDialog alertDialog = builder.create();
         alertDialog.show();

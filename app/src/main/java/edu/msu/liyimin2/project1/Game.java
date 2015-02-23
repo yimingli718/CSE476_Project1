@@ -29,10 +29,11 @@ public class Game implements Serializable {
     }
 
     public Game(){
+        //fillPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        //fillPaint.setColor(0xffcccccc);
     }
 
-    public Game(Context context){
-    }
+
 
     private synchronized void writeObject(java.io.ObjectOutputStream stream) throws java.
             io.IOException {
@@ -79,6 +80,9 @@ public class Game implements Serializable {
     }
 
     public void draw(Canvas canvas, int marginX, int marginY, int gameViewSize, float scaleFactor) {
+
+
+
         //draw all of the birds
         for(Bird b : birds){
             b.draw(canvas, marginX, marginY, gameViewSize, scaleFactor);
