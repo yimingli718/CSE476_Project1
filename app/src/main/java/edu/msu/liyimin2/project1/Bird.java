@@ -144,10 +144,10 @@ public class Bird implements Serializable {
         bird = BitmapFactory.decodeByteArray(bitmapBytes, 0, bitmapBytes.length);
     }
 
-    public void draw(Canvas canvas, int marginX, int marginY, int puzzleSize, float scaleFactor) {
+    public void draw(Canvas canvas, int marginX, int marginY, int gameViewSize, float scaleFactor) {
         canvas.save();
         // Convert x,y to pixels and add the margin, then draw
-        canvas.translate(marginX + x * puzzleSize, marginY + y * puzzleSize);
+        canvas.translate(marginX + x * gameViewSize, marginY + y * gameViewSize);
         canvas.translate(canvas.getWidth()/2, canvas.getHeight()/2);
         canvas.translate(-bird.getWidth() / 2, -bird.getHeight()/2);
         canvas.drawBitmap(bird, 0, 0 , null);

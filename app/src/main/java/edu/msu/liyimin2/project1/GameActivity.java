@@ -14,6 +14,8 @@ public class GameActivity extends ActionBarActivity {
     private GameView gameView;
     private boolean moveOn = false;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +28,6 @@ public class GameActivity extends ActionBarActivity {
         game=(Game)bundle.getSerializable("GAME");
 
         gameView.setGame(game);
-        //gameView.setPlayer(game.getActivePlayer());
 
         TextView user = (TextView)findViewById(R.id.user);
         user.setText(game.getActivePlayer().getName());
