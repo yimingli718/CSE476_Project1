@@ -98,7 +98,9 @@ public class SelectionActivity extends ActionBarActivity {
             bundle.putSerializable("GAME", game);
             intent.putExtras(bundle);
             startActivity(intent);
+            this.finish();
         }
+
     }
 
     public void onNext(View view) {
