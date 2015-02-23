@@ -59,6 +59,10 @@ public class GameActivity extends ActionBarActivity {
     }
 
     public void onConfirm(View view) {
+        /*if(game.checkCollision(game.getActivePlayer().getBird())){
+            Intent intent = new Intent(this, FinalScore.class);
+            startActivity(intent);
+        }*/
         if(!moveOn){
             moveOn = true;
             //gameView.setPlayer(game.getActivePlayer());
