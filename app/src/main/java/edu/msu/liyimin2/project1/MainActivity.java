@@ -38,40 +38,34 @@ public class MainActivity extends ActionBarActivity {
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
                 boolean handled = false;
                 if (i == EditorInfo.IME_ACTION_NEXT){
-                    game.getPlayer1().setName(textView.getText().toString());
                     Toast.makeText(MainActivity.this, "Player 1 name is: "
-                            + game.getPlayer1().getName(), Toast.LENGTH_SHORT).show();
+                            + textView.getText().toString(), Toast.LENGTH_SHORT).show();
                 }
                 return handled;
             }
         });
 
-        EditText editTextPhone = (EditText) findViewById(R.id.player_2);
-        editTextPhone.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        EditText player_2_text = (EditText) findViewById(R.id.player_2);
+        player_2_text.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
                 boolean handled = false;
                 if (i == EditorInfo.IME_ACTION_DONE) {
                     //show toast for input
-                    game.getPlayer2().setName(textView.getText().toString());
                     Toast.makeText(MainActivity.this, "Player 2 name is: "
-                            + game.getPlayer2().getName(), Toast.LENGTH_SHORT).show();
+                            + textView.getText().toString(), Toast.LENGTH_SHORT).show();
 
-                    //close keyboard and
+                    //close keyboard
                     InputMethodManager inputManager = (InputMethodManager)
                             getSystemService(Context.INPUT_METHOD_SERVICE);
                     inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
                             InputMethodManager.HIDE_NOT_ALWAYS);
-
                     handled = true;
                 }
                 return handled;
             }
         });
     }
-
-
-
 
 
     @Override
@@ -101,9 +95,11 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(this, SelectionActivity.class);
         Bundle bundle = new Bundle();
 
+        game.getPlayer1().setName(((EditText) findViewById(R.id.player_1)).getText().toString());
+        game.getPlayer2().setName(((EditText) findViewById(R.id.player_2)).getText().toString());
+
         bundle.putSerializable("GAME", game);
         intent.putExtras(bundle);
-
         startActivity(intent);
     }
 
@@ -117,4 +113,5 @@ public class MainActivity extends ActionBarActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
+
 }
