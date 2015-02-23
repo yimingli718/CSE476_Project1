@@ -3,6 +3,7 @@ package edu.msu.liyimin2.project1;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 
 
@@ -13,8 +14,8 @@ public class GameView extends View {
     /**
      * The actual game
      */
-    private Game game;
-    private Player player;
+    private Game game = new Game();
+    //private Player player = new Player();
 
     public GameView(Context context) {
         super(context);
@@ -35,11 +36,17 @@ public class GameView extends View {
         game = new Game(getContext());
     }
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        //return super.onTouchEvent(event);
+        return game.onTouchEvent(this, event);
+    }
+
     public void setGame(Game g){game = g;}
 
-    public void setPlayer(Player p){player = p;}
+    //public void setPlayer(Player p){player = p;}
 
-    public Player getPlayer() {return player;}
+    //public Player getPlayer() {return player;}
 
 
     @Override
@@ -47,6 +54,6 @@ public class GameView extends View {
         super.onDraw(canvas);
 
         game.draw(canvas);
-        player.drawBird(canvas);
+        game.getActivePlayer().drawBird(canvas, game.getMarginX(), game.getMarginY(), game.getGameViewSize(), game.getScaleFactor());
     }
 }

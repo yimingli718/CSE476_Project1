@@ -47,15 +47,24 @@ public class Bird implements Serializable {
 
     public Bird(Context context, int id) {
         rect = new Rect();
-        //setRect();
+        ///!!!!ATTENTION!!!!DISABLE BECAUSE NOT WORKING!!!///
+        // setRect();
         bird = BitmapFactory.decodeResource(context.getResources(), id);
         birdId = id;
     }
 
-    public void move(float dx, float dy) {
+    public void move(float dx, float dy, int marginX, int marginY, int viewSize) {
         x += dx;
         y += dy;
-        setRect();
+        ///!!!!ATTENTION!!!!DISABLE BECAUSE NOT WORKING!!!///
+        // setRect();
+        /*if (0.1f <= x+dx && x+dx <= 0.9f && 0.1f <= y+dy && y+dy <= 0.9f){
+            x += dx;
+            y += dy;
+            ///!!!!!!!!//setRect();
+        }*/
+        //return;
+
     }
 
     private void setRect() {
@@ -113,13 +122,6 @@ public class Bird implements Serializable {
         return false;
     }
 
-    public void draw(Canvas canvas){
-        //canvas.save();
-        //canvas.translate(-bird.getWidth() / 2, -bird.getHeight()/2);
-        canvas.drawBitmap(bird, 0, 0 , null);
-        //canvas.restore();
-    }
-
     private synchronized void writeObject(java.io.ObjectOutputStream stream) throws java.
             io.IOException {
         //stream.defaultWriteObject();
@@ -141,5 +143,30 @@ public class Bird implements Serializable {
             byteStream.write(b);
         byte bitmapBytes[] = byteStream.toByteArray();
         bird = BitmapFactory.decodeByteArray(bitmapBytes, 0, bitmapBytes.length);
+    }
+
+    public void draw(Canvas canvas, int marginX, int marginY, int puzzleSize, float scaleFactor) {
+        canvas.save();
+        // Convert x,y to pixels and add the margin, then draw
+        canvas.translate(marginX + x * puzzleSize, marginY + y * puzzleSize);
+        canvas.translate(canvas.getWidth()/2, canvas.getHeight()/2);
+        canvas.translate(-bird.getWidth() / 2, -bird.getHeight()/2);
+        canvas.drawBitmap(bird, 0, 0 , null);
+        canvas.restore();
+    }
+
+    public boolean hit(float testX, float testY, int gameViewSize, float scaleFactor) {
+        // Make relative to the location and size to the piece size
+        int pX = (int)((testX - x) * gameViewSize / scaleFactor) + bird.getWidth() / 2;
+        int pY = (int)((testY - y) * gameViewSize / scaleFactor) + bird.getHeight() / 2;
+
+        if(pX < 0 || pX >= bird.getWidth() ||
+                pY < 0 || pY >= bird.getHeight()) {
+            return false;
+        }
+
+        // We are within the rectangle of the piece.
+        // Are we touching actual picture?
+        return (bird.getPixel(pX, pY) & 0xff000000) != 0;
     }
 }

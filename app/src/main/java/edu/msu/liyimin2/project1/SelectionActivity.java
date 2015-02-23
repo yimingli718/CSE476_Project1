@@ -13,8 +13,6 @@ import java.util.ArrayList;
 
 
 public class SelectionActivity extends ActionBarActivity {
-
-
     /**
      * Game class
      */
@@ -23,7 +21,7 @@ public class SelectionActivity extends ActionBarActivity {
     /**
      * Image View
      */
-    private ImageView imgView;
+    private ImageView imgView = null;
 
     /**
      *
@@ -39,53 +37,27 @@ public class SelectionActivity extends ActionBarActivity {
     //private int cnt = 0;
 
     private Boolean moveOn = false;
-
     private TextView playerIndicator;
 
-
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
         Intent intent=this.getIntent();
         Bundle bundle=intent.getExtras();
         game = (Game)bundle.getSerializable("GAME");
-        //cnt = bundle.getInt("COUNT", 0);
-        //round = bundle.getInt("ROUND", 0);
 
         playerIndicator = (TextView)findViewById(R.id.playerIndicator);
         playerIndicator.setText(game.getActivePlayer().getName());
-        /*if(round == 0){
-            if(cnt == 0){
-                playerIndicator.setText(game.getPlayer1().getName());
-            }
-            if(cnt == 1){
-                playerIndicator.setText(game.getPlayer2().getName());
-            }
-        }
-        //switch the order to pick the bird
-        if(round == 1){
-            if(cnt == 1){
-                playerIndicator.setText(game.getPlayer1().getName());
-            }
-            if(cnt == 0){
-                playerIndicator.setText(game.getPlayer2().getName());
-            }
-        }*/
 
-
-        birdList.add(new Bird(getBaseContext(), R.drawable.donald));
-        birdList.add(new Bird(getBaseContext(), R.drawable.robin));
+        birdList.add(new Bird(getBaseContext(), R.drawable.bananaquit));
+        birdList.add(new Bird(getBaseContext(), R.drawable.ostrich));
         birdList.add(new Bird(getBaseContext(), R.drawable.parrot));
         birdList.add(new Bird(getBaseContext(), R.drawable.seagull));
         birdList.add(new Bird(getBaseContext(), R.drawable.swallow));
+
         imgView = (ImageView)findViewById(R.id.birdImage);
         imgView.setImageResource(birdList.get(birdIndex).getBirdId());
-
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -100,12 +72,10 @@ public class SelectionActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -113,77 +83,30 @@ public class SelectionActivity extends ActionBarActivity {
     {
         game.getActivePlayer().setBird(birdList.get(birdIndex));
         if(!moveOn){
+            moveOn = true;
             game.nextPlayer();
             playerIndicator.setText(game.getActivePlayer().getName());
             birdIndex = 0;
             imgView.setImageResource(birdList.get(birdIndex).getBirdId());
             imgView.invalidate();
-            moveOn = true;
         }
         else{
             Intent intent = new Intent(this, GameActivity.class);
+            moveOn = false;
             game.nextPlayer();
-
             Bundle bundle = new Bundle();
             bundle.putSerializable("GAME", game);
             intent.putExtras(bundle);
             startActivity(intent);
-
         }
-        /*cnt++;
-        if(round == 0){
-            if (cnt == 1) {
-                game.getPlayer1().setBird(birdList.get(birdIndex));
-                playerIndicator.setText(game.getPlayer2().getName());
-                birdIndex = 0;
-                imgView.setImageResource(birdList.get(birdIndex).getBirdId());
-                imgView.invalidate();
-
-            }
-            if (cnt == 2) {
-                Intent intent = new Intent(this, GameActivity.class);
-                game.getPlayer2().setBird(birdList.get(birdIndex));
-
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("GAME", game);
-                cnt = 0;
-                bundle.putInt("COUNT", cnt);
-                bundle.putInt("ROUND", round);
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
-        }
-        if(round == 1){
-            if (cnt == 1) {
-                game.getPlayer2().setBird(birdList.get(birdIndex));
-                playerIndicator.setText(game.getPlayer1().getName());
-                birdIndex = 0;
-                imgView.setImageResource(birdList.get(birdIndex).getBirdId());
-                imgView.invalidate();
-
-            }
-            if (cnt == 2) {
-                Intent intent = new Intent(this, GameActivity.class);
-                game.getPlayer1().setBird(birdList.get(birdIndex));
-
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("GAME", game);
-                cnt = 0;
-                bundle.putInt("COUNT", cnt);
-                bundle.putInt("ROUND", round);
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
-        }*/
     }
 
     public void onNext(View view) {
-        if(birdIndex != birdList.size()-1) {
+        if(birdIndex < birdList.size()-1) {
             birdIndex++;
             imgView.setImageResource(birdList.get(birdIndex).getBirdId());
             imgView.invalidate();
         }
-
     }
 
     public void onPrev(View view){
@@ -198,8 +121,6 @@ public class SelectionActivity extends ActionBarActivity {
     protected void onSaveInstanceState(Bundle bundle) {
         super.onSaveInstanceState(bundle);
         bundle.putSerializable("GAME", game);
-        //bundle.putInt("COUNT", cnt);
-        //bundle.putInt("ROUND", round);
         bundle.putInt("INDEX", birdIndex);
     }
 
@@ -207,30 +128,10 @@ public class SelectionActivity extends ActionBarActivity {
     protected void onRestoreInstanceState(Bundle bundle) {
         super.onRestoreInstanceState(bundle);
         game = (Game)bundle.getSerializable("GAME");
-        //cnt = bundle.getInt("COUNT");
-        //round = bundle.getInt("ROUND");
         birdIndex = bundle.getInt("INDEX");
 
         imgView.setImageResource(birdList.get(birdIndex).getBirdId());
         imgView.invalidate();
         playerIndicator.setText(game.getActivePlayer().getName());
-        /*if(round == 0){
-            if(cnt == 0){
-                playerIndicator.setText(game.getPlayer1().getName());
-            }
-            if(cnt == 1){
-                playerIndicator.setText(game.getPlayer2().getName());
-            }
-        }
-        //switch the order to pick the bird
-        if(round == 1){
-            if(cnt == 1){
-                playerIndicator.setText(game.getPlayer1().getName());
-            }
-            if(cnt == 0){
-                playerIndicator.setText(game.getPlayer2().getName());
-            }
-        }*/
-
     }
 }

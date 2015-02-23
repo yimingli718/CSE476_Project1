@@ -23,8 +23,6 @@ import java.util.ArrayList;
 
 
 public class MainActivity extends ActionBarActivity {
-    ////?????/////////////////////
-    //////////////////////////////
     private Game game;
 
     @Override
@@ -44,7 +42,6 @@ public class MainActivity extends ActionBarActivity {
                     Toast.makeText(MainActivity.this, "Player 1 name is: "
                             + game.getPlayer1().getName(), Toast.LENGTH_SHORT).show();
                 }
-
                 return handled;
             }
         });

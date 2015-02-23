@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class GameActivity extends ActionBarActivity {
     private Game game;
     private GameView gameView;
+    private boolean moveOn = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,35 +25,11 @@ public class GameActivity extends ActionBarActivity {
         Bundle bundle=intent.getExtras();
         game=(Game)bundle.getSerializable("GAME");
 
-        TextView user = (TextView)findViewById(R.id.user);
-
-        user.setText(game.getPlayer1().getName());
         gameView.setGame(game);
-        gameView.setPlayer(game.getActivePlayer());
-        /*if(round == 0) {
-            if (cnt == 0) {
-                user.setText(game.getPlayer1().getName());
-                gameView.setGame(game);
-                gameView.setPlayer(game.getPlayer1());
-            }
-            if (cnt == 1) {
-                user.setText(game.getPlayer2().getName());
-                gameView.setGame(game);
-                gameView.setPlayer(game.getPlayer2());
-            }
-        }
-        if(round == 1){
-            if (cnt == 1) {
-                user.setText(game.getPlayer1().getName());
-                gameView.setGame(game);
-                gameView.setPlayer(game.getPlayer1());
-            }
-            if (cnt == 0) {
-                user.setText(game.getPlayer2().getName());
-                gameView.setGame(game);
-                gameView.setPlayer(game.getPlayer2());
-            }
-        }*/
+        //gameView.setPlayer(game.getActivePlayer());
+
+        TextView user = (TextView)findViewById(R.id.user);
+        user.setText(game.getActivePlayer().getName());
     }
 
 
@@ -79,61 +56,26 @@ public class GameActivity extends ActionBarActivity {
     }
 
     public void onConfirm(View view) {
-        //cnt++;
-        game.ArchiveBird(gameView.getPlayer().getBird());
-
-        /*if(round == 0) {
-            if (cnt == 1) {
-                game.getPlayer1().addPoint();
-                Intent intent = new Intent(this, GameActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("GAME", game);
-                bundle.putInt("COUNT", cnt);
-                bundle.putInt("ROUND", round);
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
-
-            if (cnt == 2) {
-                game.getPlayer2().addPoint();
-                Intent intent = new Intent(this, SelectionActivity.class);
-                //Intent intent = new Intent(this, SelectionActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("GAME", game);
-                cnt = 0;
-                bundle.putInt("COUNT", cnt);
-                round++;
-                bundle.putInt("ROUND", round);
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
+        if(!moveOn){
+            moveOn = true;
+            //gameView.setPlayer(game.getActivePlayer());
+            game.getActivePlayer().addPoint();
+            game.ArchiveBird(game.getActivePlayer().getBird());
+            game.nextPlayer();
+            TextView user = (TextView)findViewById(R.id.user);
+            user.setText(game.getActivePlayer().getName());
+            gameView.setGame(game);
+            gameView.invalidate();
         }
-        if(round == 1){
-            if (cnt == 1) {
-                game.getPlayer2().addPoint();
-                Intent intent = new Intent(this, GameActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("GAME", game);
-                bundle.putInt("COUNT", cnt);
-                bundle.putInt("ROUND", round);
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
-
-            if (cnt == 2) {
-                game.getPlayer1().addPoint();
-                Intent intent = new Intent(this, SelectionActivity.class);
-                //Intent intent = new Intent(this, SelectionActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("GAME", game);
-                cnt = 0;
-                bundle.putInt("COUNT", cnt);
-                round = 0;
-                bundle.putInt("ROUND", round);
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
-
-        }*/
+        else{
+            moveOn = false;
+            game.getActivePlayer().addPoint();
+            game.ArchiveBird(game.getActivePlayer().getBird());
+            Intent intent = new Intent(this, SelectionActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("GAME", game);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
     }
 }

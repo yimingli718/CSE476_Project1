@@ -23,8 +23,11 @@ public class Player implements Serializable {
     public Bird getBird() { return bird;}
     public void addPoint() { score++; }
 
-    public void drawBird(Canvas canvas){
-        bird.draw(canvas);
+    //public void drawBird(Canvas canvas){
+    //    bird.draw(canvas);
+    //}
+    public void drawBird(Canvas canvas, int marginX, int marginY, int puzzleSize, float scaleFactor) {
+        bird.draw(canvas, marginX, marginY, puzzleSize, scaleFactor);
     }
 
     private synchronized void writeObject(java.io.ObjectOutputStream stream) throws java.
