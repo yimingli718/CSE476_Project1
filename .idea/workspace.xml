@@ -35,14 +35,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7193b162-2e6e-44b9-8367-09d23b43ccc1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/model_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/model_data.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/FinalScore.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/FinalScore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_21_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_21_0_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_21_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_21_0_3.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cse476_project1.iws" />
@@ -99,8 +93,8 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="697">
-              <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+            <state vertical-scroll-proportion="-6.2" vertical-offset="270" max-vertical-offset="714">
+              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -116,12 +110,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FinalScore.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FinalScore.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/FinalScore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1547">
-              <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-              <folding />
+            <state vertical-scroll-proportion="0.5511222" vertical-offset="459" max-vertical-offset="1496">
+              <caret line="46" column="81" selection-start-line="46" selection-start-column="81" selection-end-line="46" selection-end-column="81" />
+              <folding>
+                <element signature="e#1097#1145#0" expanded="true" />
+                <element signature="e#1273#1316#0" expanded="true" />
+                <element signature="e#1379#1427#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,11 +144,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bird.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Bird.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.12718205" vertical-offset="1632" max-vertical-offset="3281">
-              <caret line="100" column="31" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="3281">
+              <caret line="107" column="25" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -725,7 +723,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/SelectionView.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_game.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_game1.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Player.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Game.java" />
@@ -733,6 +730,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/FinalScore.java" />
       </list>
     </option>
   </component>
@@ -1039,7 +1038,11 @@
       <created>1424733209601</created>
       <updated>1424733209601</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="final score screen finished">
+      <created>1424739095348</created>
+      <updated>1424739095348</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1153,7 +1156,8 @@
     <MESSAGE value="SelectionActivity saves state between landscape and portrait mode" />
     <MESSAGE value="Moved some game class function to gameview" />
     <MESSAGE value="fixed hard-coded main activity" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed hard-coded main activity" />
+    <MESSAGE value="final score screen finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="final score screen finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1163,12 +1167,6 @@
           <line>9325</line>
           <properties />
           <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java</url>
-          <line>92</line>
-          <properties />
-          <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/GameActivity.java</url>
@@ -1541,26 +1539,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/FinalScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1547">
-          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/SelectionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="2025">
           <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="697">
-          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1599,9 +1581,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/Bird.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.12718205" vertical-offset="1632" max-vertical-offset="3281">
-          <caret line="100" column="31" selection-start-line="100" selection-start-column="31" selection-end-line="100" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="3281">
+          <caret line="107" column="25" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.2" vertical-offset="270" max-vertical-offset="714">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/msu/liyimin2/project1/FinalScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5511222" vertical-offset="459" max-vertical-offset="1496">
+          <caret line="46" column="81" selection-start-line="46" selection-start-column="81" selection-end-line="46" selection-end-column="81" />
+          <folding>
+            <element signature="e#1097#1145#0" expanded="true" />
+            <element signature="e#1273#1316#0" expanded="true" />
+            <element signature="e#1379#1427#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

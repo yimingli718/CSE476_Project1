@@ -43,6 +43,9 @@ public class FinalScore extends ActionBarActivity {
         if(game.getPlayer1().getScore() >= game.getPlayer2().getScore()){
             winnerIndicator.setText(getResources().getString(R.string.player_1_wins));
         }
+        else if(game.getPlayer1().getScore() == game.getPlayer2().getScore()){
+            winnerIndicator.setText(getResources().getString(R.string.tie_game));
+        }
         else{
             winnerIndicator.setText(getResources().getString(R.string.player_2_wins));
         }
