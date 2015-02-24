@@ -64,6 +64,9 @@ public class GameActivity extends ActionBarActivity {
         game.updateBirds(getBaseContext());
         if(game.checkCollision(game.getActivePlayer().getBird())){
             Intent intent = new Intent(this, FinalScore.class);
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("GAME", game);
+            intent.putExtras(bundle);
             startActivity(intent);
             this.finish();
         }

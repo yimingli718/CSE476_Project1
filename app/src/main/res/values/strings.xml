@@ -21,6 +21,7 @@
     <string name="select">Select</string>
     <string name="title_activity_final_score">FinalScore</string>
     <string name="player_2_wins">PLAYER 2 WINS!</string>
+    <string name="player_1_wins">PLAYER 1 WINS!</string>
     <string name="player_1_score">0</string>
     <string name="player_1_score_string">Player 1 score: </string>
     <string name="player_2_score_string">Player 2 score:</string>

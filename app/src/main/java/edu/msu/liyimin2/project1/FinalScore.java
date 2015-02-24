@@ -6,14 +6,52 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 
 public class FinalScore extends ActionBarActivity {
+
+    /**
+     * Game class
+     */
+    private Game game = new Game();
+
+    /**
+     * Winner text
+     */
+    private TextView winnerIndicator;
+
+    /**
+     * Player 1 score text
+     */
+    private TextView player1score;
+
+    /**
+     * Player 2 score text
+     */
+    private TextView player2score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_score);
+        Intent intent=this.getIntent();
+        Bundle bundle=intent.getExtras();
+        game = (Game)bundle.getSerializable("GAME");
+
+        winnerIndicator = (TextView)findViewById(R.id.winnerText);
+        if(game.getPlayer1().getScore() >= game.getPlayer2().getScore()){
+            winnerIndicator.setText(getResources().getString(R.string.player_1_wins));
+        }
+        else{
+            winnerIndicator.setText(getResources().getString(R.string.player_2_wins));
+        }
+        player1score = (TextView)findViewById(R.id.player_1_score);
+        String player1ScoreString = String.valueOf(game.getPlayer1().getScore());
+        player1score.setText(player1ScoreString);
+        player2score = (TextView)findViewById(R.id.player_2_score);
+        String player2ScoreString = String.valueOf(game.getPlayer2().getScore());
+        player2score.setText(player2ScoreString);
     }
 
     @Override
