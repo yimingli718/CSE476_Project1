@@ -32,8 +32,10 @@ public class GameActivity extends ActionBarActivity {
 
         TextView user = (TextView)findViewById(R.id.user);
         user.setText(game.getActivePlayer().getName());
-
-
+        game.getPlayer1().getBird().setX((int)(gameView.getMarginX()+0.5f * gameView.getGameViewSize()));
+        game.getPlayer1().getBird().setY((int)(gameView.getMarginY()+0.5f * gameView.getGameViewSize()));
+        game.getPlayer1().getBird().setX((int)(gameView.getMarginX()+0.5f * gameView.getGameViewSize()));
+        game.getPlayer1().getBird().setY((int)(gameView.getMarginY()+0.5f * gameView.getGameViewSize()));
     }
 
     @Override

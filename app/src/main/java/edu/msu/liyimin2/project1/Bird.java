@@ -34,12 +34,12 @@ public class Bird implements Serializable {
     /**
      * x location in pixels
      */
-    private float x = 0;
+    private int x = 0;
 
     /**
      * y location
      */
-    private float y = 0;
+    private int y = 0;
 
 
 
@@ -55,7 +55,7 @@ public class Bird implements Serializable {
         birdId = id;
     }
 
-    public void move(float dx, float dy, int marginX, int marginY, int viewSize) {
+    public void move(int dx, int dy, int marginX, int marginY, int viewSize) {
         x += dx;
         y += dy;
         ///!!!!ATTENTION!!!!DISABLE BECAUSE NOT WORKING!!!///
@@ -121,8 +121,8 @@ public class Bird implements Serializable {
 
     private synchronized void writeObject(java.io.ObjectOutputStream stream) throws java.
             io.IOException {
-        stream.writeFloat(x);
-        stream.writeFloat(y);
+        stream.writeInt(x);
+        stream.writeInt(y);
         stream.writeInt(birdId);
         /*ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
         bird.compress(Bitmap.CompressFormat.PNG, 0, byteStream);
@@ -132,8 +132,8 @@ public class Bird implements Serializable {
 
     private synchronized void readObject(java.io.ObjectInputStream stream) throws java.
             io.IOException, ClassNotFoundException {
-        x = stream.readFloat();
-        y = stream.readFloat();
+        x = stream.readInt();
+        y = stream.readInt();
         birdId = stream.readInt();
         /*ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
         int b;
@@ -146,11 +146,14 @@ public class Bird implements Serializable {
 
     public void draw(Canvas canvas, int marginX, int marginY, int gameViewSize, float scaleFactor) {
         //setRect();
-
         canvas.save();
+
         // Convert x,y to pixels and add the margin, then draw
-        canvas.translate(marginX + x * gameViewSize, marginY + y * gameViewSize);
-        canvas.translate(canvas.getWidth()/2, canvas.getHeight()/2);
+        //canvas.translate(marginX + x * gameViewSize, marginY + y * gameViewSize);
+        //canvas.translate(canvas.getWidth()/2, canvas.getHeight()/2);
+        //setX(x-bird.getWidth()/2);
+        //setY(y-bird.getHeight()/2);
+        canvas.translate(x, y);
         canvas.translate(-bird.getWidth() / 2, -bird.getHeight()/2);
         canvas.drawBitmap(bird, 0, 0 , null);
         canvas.restore();
@@ -182,11 +185,11 @@ public class Bird implements Serializable {
         rect = new Rect((int)x, (int)y, (int)x+bird.getWidth(), (int)y+bird.getHeight());
     }
 
-    public void setX(float x) {
+    public void setX(int x) {
         this.x = x;
     }
 
-    public void setY(float y) {
+    public void setY(int y) {
         this.y = y;
     }
 

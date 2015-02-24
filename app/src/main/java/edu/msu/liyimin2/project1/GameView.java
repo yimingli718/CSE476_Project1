@@ -31,9 +31,9 @@ public class GameView extends View {
     //How much we scale the puzzle pieces
     private float scaleFactor;
     //Most recent relative X touch when dragging
-    private float lastRelX;
+    private int lastRelX;
     //Most recent relative Y touch when dragging
-    private float lastRelY;
+    private int lastRelY;
 
     /**
      * This variable is set to a piece we are dragging. If
@@ -71,8 +71,8 @@ public class GameView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        float relX = (event.getX() - getMarginX()) / getGameViewSize();
-        float relY = (event.getY() - getMarginY()) / getGameViewSize();
+        int relX = (int)event.getX() - getMarginX();
+        int relY = (int)event.getY() - getMarginY();
 
         switch(event.getActionMasked()) {
 
@@ -137,7 +137,7 @@ public class GameView extends View {
         game.getActivePlayer().drawBird(canvas, getMarginX(), getMarginY(), getGameViewSize(), getScaleFactor());
     }
 
-    private boolean onTouched(float x, float y) {
+    private boolean onTouched(int x, int y) {
 
         if(game.getActivePlayer().getBird() == null){
             return false;
